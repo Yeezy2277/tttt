@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+	<title>Add React in One Minute</title>
+      <link rel="stylesheet" href="src/Components/Header/Header.css">
+      <link rel="stylesheet" href="src/Components/Range/Range.css">
+      <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
+      <link rel="stylesheet" href="App.css">
+	<link rel="stylesheet" href="./src/Components/Pricing/Pricing.css">
+  </head>
+  <body>
+    <div id="header">
+        <Header/>
+    </div>
+    <div class="mainWrapper">
+        <div class="wrapper">
+            <div class="bigText">
+                <h1>Prising</h1>
+            </div>
+            <div class="config">
+                <h1 class="configTitle">Select the required server configuration</h1>
+                <div class="configText">
+                    <div class="configText__item">
+                        <p>CPU: 4</p>
+                        <button/>
+                    </div>
+                    <p>150$/M</p>
+                </div>
+                <Range/>
+                <div class="configText">
+                    <div class="configText__item">
+                        <p>RAM: 8192 mb</p>
+                        <button/>
+                    </div>
+                    <p>3000$/M</p>
+                </div>
+                <Range/>
+                <div class="configText">
+                    <div class="configText__item">
+                        <p>DISK: 110 Gb SSD</p>
+                        <button/>
+                    </div>
+                    <p>330$/M</p>
+                </div>
+                <Range/>
+            </div>
+            <div class="os">
+                <div class="osText">
+                    <div class="osText__item">
+                        <h1>Pre-installed OS: </h1>
+                        <div class="osText_subtitle">
+                            <p>CentOS 7 x64</p>
+                            <button/>
+                        </div>
+                    </div>
+                    <h1 class="rightText">0$/M</h1>
+                </div>
+                <div class="osText">
+                    <div class="osText__item">
+                        <h1>Backup: </h1>
+                        <div class="osText_subtitle">
+                            <p>Standart</p>
+                            <button/>
+                        </div>
+                    </div>
+                    <h1 class="rightText">0$/M</h1>
+                </div>
+                <div class="osText">
+                    <div class="osText__item">
+                        <h1>Support:</h1>
+                        <div class="osText_subtitle">
+                            <p>Basic SLA Standart</p>
+                            <button/>
+                        </div>
+                    </div>
+                    <h1 class="rightText">0$/M</h1>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr/>
+        </div>
+        <div class="order">
+            <div class="orderText">
+                <div class="discount">
+                    <p>Discount 0% - 0$</p>
+                    <h1>350 <sup>$/M</sup></h1>
+                </div>
+                <div class="payment">
+                    <p>Payment period</p>
+                    <h1>1 <sup>M</sup></h1>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="/order">order</a>
+            </div>
+        </div>
+    </div>
+    <!-- Load React. -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script src="./Components/LittleComponents/Button/Button.js"></script>
+    <script src="./Components/Range/Range.js"></script>
+    <script src="./Components/Header/Header.js"></script>
+	<script>
+        ReactDOM.render(React.createElement(Header, null), document.getElementById('header'));
+    </script>
+
+  </body>
+</html>

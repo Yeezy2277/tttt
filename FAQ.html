@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+	<title>Add React in One Minute</title>
+      <link rel="stylesheet" href="src/Components/Header/Header.css">
+      <link rel="stylesheet" href="src/Components/Range/Range.css">
+      <link rel="stylesheet" href="src/Components/faq/FAQ.css">
+      <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
+      <link rel="stylesheet" href="App.css">
+  </head>
+  <body>
+
+    <div id="root">
+      <Header/>
+    </div>
+  <div class="faq">
+    <div class="block">
+      <h1>FAQ</h1>
+      <img src="https://i.imgur.com/NW09Idm.png" alt=""/>
+    </div>
+    <div class="checkboxes">
+      <div class="radio__item">
+        <input type="radio" name="category" id="category-1"/>
+        <label for="category-1">View all</label>
+      </div>
+      <div class="radio__item">
+        <input type="radio" name="category" id="category-2"/>
+        <label for="category-2">Press</label>
+      </div>
+      <div class="radio__item">
+        <input type="radio" name="category" id="category-3"/>
+        <label for="category-3">Work</label>
+      </div>
+      <div class="radio__item">
+        <input type="radio" name="category" id="category-4"/>
+        <label for="category-4">Awards</label>
+      </div>
+      <div class="radio__item">
+        <label for="category-5"></label>
+        <input type="radio" name="category" id="category-5"/>
+        <label for="category-4">Events</label>
+      </div>
+    </div>
+    <div class="topic-block">
+      <div class="faq-1"><FAQItem/></div>
+      <div class="faq-2"><FAQItem/></div>
+      <div class="faq-3"><FAQItem/></div>
+      <div class="faq-4"><FAQItem/></div>
+      <div class="faq-5"><FAQItem/></div>
+      <hr/>
+    </div>
+    <div class="faq-form-wrapper">
+      <form class="faq-form">
+        <h1>Ask your question</h1>
+        <input type="text" placeholder="Email"/>
+        <label>
+          <textarea placeholder="Question"></textarea>
+        </label>
+        <div class="faq-form-button">
+          <Button link={"/order"} text="order"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <!-- Load React. -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script src="./Components/LittleComponents/Button/Button.js"></script>
+    <script src="./Components/Range/Range.js"></script>
+    <script src="./Components/Header/Header.js"></script>
+    <script src="./Components/faq/FAQ.js"></script>
+    <script src="./Components/faq/faqItem.js"></script>
+	<script>
+        ReactDOM.render(React.createElement(Header, null), document.getElementById('root'));
+        ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-1'));
+        ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-2'));
+        ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-3'));
+        ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-4'));
+        ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-5'));
+    </script>
+
+  </body>
+</html>
