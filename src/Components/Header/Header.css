@@ -1,0 +1,95 @@
+.wrapperHead h1,.wrapperHead a {
+    text-transform: uppercase;
+}
+
+.wrapperHead a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrapperHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.leftBlock {
+    display: flex;
+    align-items: center;
+}
+
+.leftBlock a {
+    margin-left: 50px;
+}
+
+.rightBlock {
+    display: flex;
+    align-items: center;
+}
+.rightLinks {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+.leftBlock h1{
+    font-family: "Myriad Pro", sans-serif;
+}
+
+.leftBlock a {
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.rightBlock a {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.burger {
+    display: none;
+}
+.burger button > div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+    .leftBlock h1 {
+        font-size: 30px;
+    }
+    .leftBlock a {
+        margin-left: 30px;
+    }
+    .rightLinks {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .wrapperHead {
+        padding: 0;
+    }
+    .wrapperHead a {
+        display: none;
+    }
+}

@@ -73,7 +73,7 @@ var Header = function Header() {
                 ),
                 React.createElement(
                     "a",
-                    { href: "/contact" },
+                    { href: "contact.html" },
                     "Contact Us"
                 )
             ),

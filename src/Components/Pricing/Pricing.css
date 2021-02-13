@@ -1,0 +1,212 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+}
+
+.bigText h1{
+    font-size: 120px;
+    font-family: "Futura PT";
+    position: relative;
+    bottom: 120px;
+}
+
+.configText {
+    display: flex;
+    justify-content: space-between;
+}
+
+.configTitle {
+    font-size: 28px;
+    font-family: "Futura PT Demi", serif;
+}
+
+.configText__item {
+    display: flex;
+    align-items: center;
+}
+
+.configText p, .os h1, .os p {
+    font-family: "Futura PT Demi", serif;
+    font-size: 22px;
+}
+
+.osText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rightText {
+    margin-left: 100px;
+}
+.osText__item {
+    display: flex;
+    align-items: center;
+}
+
+.osText__item p {
+    padding-left: 20px;
+}
+
+.osText__item p {
+    text-decoration: underline;
+}
+
+.osText_subtitle {
+    display: flex;
+}
+
+.wrapper button {
+    background: url("../../../../ze-host/src/img/ask.png");
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.wrapper button, .wrapper img {
+    width: 24px;
+    height: 24px;
+}
+
+hr {
+    margin-top: 100px;
+    margin-right: 50px;
+    width: 64vw;
+    border: 1px solid black;
+    float: right;
+}
+
+.order {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.order h1 {
+    font-family: "Futura PT Heavy", serif;
+    font-size: 80px;
+}
+
+.order sup, .order p {
+    font-family: "Futura PT Medium", serif;
+    font-size: 16px;
+}
+
+.orderText {
+    display: flex;
+}
+
+.discount h1, .payment h1{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 20px;
+}
+
+.discount h1 {
+    right: 20px;
+}
+
+.discount, .payment, .order button {
+    margin-right: 80px;
+}
+
+@media (max-width: 768px) {
+    .mainWrapper {
+        align-items: center;
+    }
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bigText h1 {
+        font-size: 80px;
+    }
+    .order h1 {
+        font-size: 60px;
+    }
+    .discount h1, .payment h1 {
+        left: 50px;
+    }
+    .discount p, .payment p {
+        position: relative;
+        left: 50px;
+    }
+}
+
+@media (max-width: 320px) {
+    .bigText h1 {
+        font-size: 46px;
+    }
+    .bigText {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .config, .osText {
+        padding-left: 50px;
+    }
+
+    .config {
+        font-size: 22px;
+    }
+
+    .configTitle {
+        font-size: 24px;
+    }
+
+    .configText p{
+        font-size: 16px;
+    }
+    .osText h1, .osText p {
+        font-size: 14px;
+    }
+
+    .osText {
+        padding-right: 50px;
+    }
+
+    .configTitle h1 {
+        padding-right: 50px;
+        width: 70%;
+    }
+    .configText p:last-child {
+        padding-right: 50px;
+    }
+
+    .wrapper button {
+        margin-left: 5px;
+    }
+
+    .osText__item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order {
+        flex-direction: column;
+    }
+    .discount sup {
+        position: relative;
+        bottom:90px;
+        left: 130px;
+    }
+
+    .payment sup {
+        position: relative;
+        bottom:80px;
+        left: 40px;
+    }
+
+    .orderText p {
+        font-size: 18px;
+    }
+
+}

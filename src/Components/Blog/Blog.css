@@ -1,0 +1,61 @@
+.blog {
+    font-family: "Futura PT", serif;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block h1 {
+    font-size: 120px;
+}
+
+.block img {
+    align-self: center;
+}
+
+.blog-block hr {
+    border: 1px solid black;
+}
+
+.checkboxes {
+    margin-top: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.radio__item {
+    margin-left: 30px;
+}
+
+.blog__item {
+    display: flex;
+}
+
+.blog-text {
+    display: flex;
+}
+
+.blog-text img {
+    align-self: flex-start;
+}
+
+.blog__item {
+    padding-bottom: 50px;
+}
+
+.blog-text {
+    position: relative;
+}
+
+.blog-text img{
+    padding-right: 0;
+    position: absolute;
+    right: 10px;
+}
+.blog-text h1 {
+    padding-left: 20px;
+    width: 56%;
+}

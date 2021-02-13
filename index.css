@@ -1,0 +1,158 @@
+body {
+    background: url("img/background.png") no-repeat;
+}
+
+.content {
+    background: #2610ad;
+}
+
+.index a, h1 {
+    color: white;
+}
+
+.content a {
+    text-decoration: none;
+    font-family: "Futura PT", serif;
+    font-weight: bold;
+}
+
+.content h1 {
+    width: 250px;
+    display: none;
+}
+
+.pricing, .colocation, .parthners, .benefits, .protection, .vdi, .vps, .infrastructure {
+    position: absolute;
+}
+
+.content h1 {
+    position: relative;
+}
+
+.pricing-text {
+    position: relative;
+    bottom: 130px;
+    left: 16%;
+}
+
+.pricing:hover .pricing-text, .colocation:hover .colocation-text, .parthners:hover .parthners-text,
+.benefits:hover .benefits-text, .protection:hover .protection-text, .vdi:hover .vdi-text, .vps:hover
+.vps-text, .infrastructure:hover .infrastructure-text {
+    display: block;
+}
+
+.colocation-text {
+    position: relative;
+    bottom: 120px;
+    left: 18%;
+}
+.parthners-text {
+    position: relative;
+    bottom: 110px;
+    left: 22%;
+}
+
+.benefits-text {
+    position: relative;
+    bottom: 120px;
+    left: 24%;
+}
+
+.protection-text {
+    position: relative;
+    bottom: 110px;
+    left: 20%;
+}
+
+.vdi-text {
+    position: relative;
+    bottom: 125px;
+    left: 25%;
+}
+
+.vps-text {
+    position: relative;
+    bottom: 115px;
+    left: 23%;
+}
+
+.infrastructure-text {
+    position: relative;
+    bottom: 165px;
+    left: 27%;
+}
+
+.pricing {
+    left: 25%;
+    top: 2%;
+}
+
+.pricing  h1{
+    position: relative;
+    top: 25%;
+}
+.infrastructure {
+    top: 26%;
+    left: 6%;
+
+}
+
+.vdi {
+    top: 35%;
+    left: 35%;
+}
+
+.vps {
+    left: 25%;
+    top: 65%;
+}
+
+.colocation {
+    top: 22%;
+    left: 60%;
+}
+
+.protection {
+    left: 57%;
+    top: 54%;
+}
+
+.benefits {
+    left: 80%;
+    top: 12%;
+}
+
+.parthners {
+    left: 79%;
+    top: 60%;
+}
+
+.content-adaptive {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .content img{
+        width: 85%;
+    }
+
+    .content h1 {
+        font-size: 25px;
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .content-adaptive {
+        display: flex;
+    }
+
+    .pricing, .colocation, .parthners, .benefits, .protection, .vdi, .vps, .infrastructure {
+        position: static;
+    }
+    img {
+        width: 150px;
+        margin-top: 60px;
+    }
+}

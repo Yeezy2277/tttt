@@ -1,0 +1,92 @@
+.wrapper {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.adaptive-img {
+    display: none;
+}
+
+.description {
+    padding-left: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description h1 {
+    font-family: "Futura PT", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.description p{
+    font-size: 22px;
+    width: 90%;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+}
+
+.description > .btn {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+@media (max-width: 1600px) {
+    .wrapper {
+        padding-left: 50px;
+    }
+    .wrapper img {
+        width: 75%;
+        height: auto;
+    }
+
+    .description {
+        padding-left: 80px;
+    }
+    .description h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper, .description {
+        padding: 0;
+    }
+    .wrapper img{
+        width: 90vw;
+        height: auto;
+    }
+    .main-img {
+        display: none;
+    }
+    .adaptive-img {
+        display: block;
+    }
+    .description > .btn {
+        justify-content: flex-end;
+    }
+    .description p {
+        width: 95vw;
+    }
+}
+
+@media (max-width: 320px) {
+    .description h1 {
+        font-size: 28px;
+    }
+    .description p {
+        font-size: 16px;
+        width: 85vw;
+    }
+    .description > .btn {
+        justify-content: center;
+    }
+    .description > .btn a {
+        font-size: 8px;
+        padding: 12px 30px;
+    }
+}
