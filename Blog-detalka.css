@@ -1,0 +1,112 @@
+hr {
+    border: 1px solid black;
+}
+
+p {
+    font-family: Lato, sans-serif;
+}
+
+.blog-detalka {
+    font-family: "Futura PT", serif;
+    padding-left: 60px;
+}
+
+.detalka-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalka-title h1 {
+    font-size: 80px;
+    line-height: 75px;
+    width: 70%;
+}
+
+.detalka-title img {
+    align-self: center;
+}
+
+.detalka-date h1 {
+    font-size: 100px;
+    line-height: 5px;
+}
+
+.detalka-subtitle {
+    display: flex;
+}
+
+.detalka-subtitle p:last-child {
+    margin-left: 50%;
+}
+
+.detalka-subtitle p{
+    font-family: "Futura PT", serif;
+}
+
+.leftBlock-img img {
+    width: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.leftBlock-img {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalka-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.content-rightBlock {
+    padding-left: 80px;
+}
+
+.content-rightBlock p {
+    width: 82%;
+}
+
+@media (max-width: 768px) {
+    .detalka-title h1 {
+        font-size: 56px;
+        line-height: 55px;
+    }
+    .detalka-date h1 {
+        font-size: 50px;
+    }
+
+    .blog-detalka {
+        padding: 0;
+    }
+    .detalka-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-rightBlock {
+        padding: 0;
+    }
+    .content-rightBlock p {
+        width: 95%;
+    }
+    .leftBlock-bigImg img, .content-rightBlock img {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 320px) {
+    .detalka-title h1 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .detalka-subtitle {
+        flex-direction: column;
+    }
+    .detalka-subtitle p:last-child {
+        margin: 0;
+    }
+}

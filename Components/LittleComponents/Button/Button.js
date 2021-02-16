@@ -9,3 +9,5 @@ var Button = function Button(props) {
         )
     );
 };
+
+ReactDOM.render(React.createElement(Button, null), document.getElementById('root'));

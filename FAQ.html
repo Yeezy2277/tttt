@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-	<title>Add React in One Minute</title>
+	<title>Web-site</title>
       <link rel="stylesheet" href="src/Components/Header/Header.css">
+      <link rel="stylesheet" href="src/Components/Footer/Footer.css">
       <link rel="stylesheet" href="src/Components/Range/Range.css">
       <link rel="stylesheet" href="src/Components/faq/FAQ.css">
       <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
@@ -58,11 +59,14 @@
           <textarea placeholder="Question"></textarea>
         </label>
         <div class="faq-form-button">
-          <Button link={"/order"} text="order"/>
+          <div class="btn">
+            <a href="/order">order</a>
+          </div>
         </div>
       </form>
     </div>
   </div>
+    <div id="footer"></div>
 
     <!-- Load React. -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -70,10 +74,12 @@
 	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script src="./Components/LittleComponents/Button/Button.js"></script>
+    <script src="data.js"></script>
     <script src="./Components/Range/Range.js"></script>
     <script src="./Components/Header/Header.js"></script>
     <script src="./Components/faq/FAQ.js"></script>
     <script src="./Components/faq/faqItem.js"></script>
+    <script src="./Components/Footer/Footer.js"></script>
 	<script>
         ReactDOM.render(React.createElement(Header, null), document.getElementById('root'));
         ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-1'));
@@ -81,6 +87,7 @@
         ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-3'));
         ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-4'));
         ReactDOM.render(React.createElement(FAQItem, null), document.querySelector('.faq-5'));
+        ReactDOM.render(React.createElement(Footer, null), document.querySelector('#footer'));
     </script>
 
   </body>

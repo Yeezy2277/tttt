@@ -1,14 +1,15 @@
 const Header = () => {
+    const [burger, setBurger] = React.useState(false);
     return <div className="wrapperHead">
         <div className="leftBlock">
             <h1>LOGO</h1>
-            <a href= '/en'> <u>ENG</u></a>
-            <a href='/heb'>HEB</a>
+            <a href="#eng"> <u>ENG</u></a>
+            <a href="heb">HEB</a>
         </div>
         <div className="rightBlock">
             <div className="rightLinks">
-                <a href='/home'>Home</a>
-                <a href='about'> <u>About</u></a>
+                <a href='index.html'>Home</a>
+                <a href='about.html'> <u>About</u></a>
                 <a href='service.html'>Services</a>
             </div>
             <div className="rightLinks">
@@ -21,11 +22,28 @@ const Header = () => {
                 <Button link={"https://cp.zehost.com"} text={"Control panel"}/>
             </div>
             <div className="burger">
-                <button>
+                <button onClick={() => {
+                if (burger) {
+                    setBurger(false);
+                }
+                else {
+                    setBurger(true);
+                }
+                }
+                }>
                     <div></div>
                     <div></div>
                     <div></div>
                 </button>
+                {burger ? <div id="menu">
+                    <a href='index.html'>Home</a>
+                    <a href='about.html'> <u>About</u></a>
+                    <a href='service.html'>Services</a>
+                    <a href='pricing.html'>Pricing</a>
+                    <a href='blog.html'>Blog</a>
+                    <a href='faq.html'>FAQ</a>
+                    <a href='contact.html'>Contact Us</a>
+                </div> : ""}
             </div>
         </div>
     </div>

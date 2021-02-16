@@ -1,0 +1,177 @@
+hr {
+    border: 1px solid black;
+}
+
+p {
+    font-family: Lato, sans-serif;
+}
+
+.about {
+    font-family: "Futura PT", serif;
+    padding-left: 60px;
+}
+
+.about-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-title h1 {
+    font-size: 80px;
+    line-height: 75px;
+    width: 70%;
+}
+
+.about-title img {
+    align-self: center;
+}
+
+.about-subtitle {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.about-subtitle p {
+    font-family: Lato, sans-serif;
+    font-size: 22px;
+    width: 75%;
+}
+
+.subtitle-text {
+    margin-top: 17%;
+    padding-left: 15%;
+}
+
+.subtitle-img img {
+    width: 45vw;
+}
+
+.advantages-title {
+    font-size: 60px;
+    width: 15%;
+    line-height: 50px;
+}
+
+.about-content {
+    display: flex;
+}
+
+.our-partners {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-partners h1 {
+    font-size: 60px;
+    width: 20%;
+    line-height: 50px;
+}
+
+.our-partners img {
+    align-self: center;
+}
+.content__item h2 {
+    font-family: "Futura PT Demi", serif;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.content__item h1 {
+    font-family: "Futura PT", serif;
+    font-size: 80px;
+    line-height: 10px;
+}
+
+.partners-mini {
+    display: none;
+}
+
+.content__item p {
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    width: 85%;
+}
+.content__item_mini {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .about-subtitle p {
+        width: 95%;
+    }
+    .subtitle-text {
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 0;
+    }
+    .about-subtitle {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subtitle-text {
+        padding: 0;
+        margin-top: 5%;
+    }
+
+    .subtitle-img img {
+        width: 97vw;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .partners-mini {
+        display: block;
+    }
+    .our-partners h1 {
+        display: none;
+    }
+
+    .content__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content__item h1 {
+        padding-right: 20px;
+    }
+
+    .content__item_subtitle {
+        display: none;
+    }
+    .content__item_text{
+        display: none;
+    }
+    .content__item_mini {
+        display: block;
+        margin-left: 60px;
+    }
+
+    .content__item_mini:nth-child(2) {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 320px) {
+    .detalka-title h1 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .detalka-subtitle {
+        flex-direction: column;
+    }
+    .detalka-subtitle p:last-child {
+        margin: 0;
+    }
+}

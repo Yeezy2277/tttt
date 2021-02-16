@@ -1,70 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-	<title>Add React in One Minute</title>
-	<link rel="stylesheet" href="src/Components/Header/Header.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-      <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
-      <link rel="stylesheet" href="index.css">
-      <link rel="stylesheet" href="App.css">
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Web-site</title>
+    <link rel="stylesheet" href="src/Components/Header/Header.css">
+    <link rel="stylesheet" href="src/Components/Footer/Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
 
-    <!-- We will put our React component inside this div. -->
-    <div class="index">
-        <div id="root">
-            <Header/>
+<!-- We will put our React component inside this div. -->
+<div class="index">
+    <div id="root">
+        <Header/>
+    </div>
+    <div class="content">
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="pricing-circle">
+            <h1 class="pricing-text">Pricing</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
         </div>
-        <div class="content">
-            <a href="pricing.html" class="pricing">
-                <img src="img/Priicing.png" alt="">
-                <h1 class="pricing-text">Pricing</h1>
-            </a>
-            <a href="/colocation" class="colocation">
-                <img src="img/Colocation.png" alt="">
-                <h1 class="colocation-text">Colocation</h1>
-            </a>
-            <a href="/parthners" class="parthners">
-                <img src="img/Parthners.png" alt="">
-                <h1 class="parthners-text">Parthners</h1>
-            </a>
-            <a href="/benefits" class="benefits">
-                <img src="img/Benefits.png" alt="">
-                <h1 class="benefits-text">Benefits</h1>
-            </a>
-            <a href="/protection" class="protection">
-                <img src="img/DDOS%20protection.png" alt="">
-                <h1 class="protection-text">DDOS Protection</h1>
-            </a>
-            <a href="/vdi" class="vdi">
-                <img src="img/VDI.png" alt="">
-                <h1 class="vdi-text">VDI</h1>
-            </a>
-            <a href="/vps" class="vps">
-                <img src="img/VPS_VDS.png" alt="">
-                <h1 class="vps-text">VPS/VDS</h1>
-            </a>
-            <a href="/infrastructure" class="infrastructure">
-                <img src="img/Cloud%20infrastructure.png" alt="">
-                <h1 class="infrastructure-text">Cloud infrastructure</h1>
-            </a>
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="colocation-circle">
+            <h1 class="colocation-text">Colocation</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
+        </div>
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="parthners-circle">
+            <h1 class="parthners-text">Parthners</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
+        </div>
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="benefits-circle">
+            <h1 class="benefits-text">Benefits</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
+        </div>
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="protection-circle">
+            <h1 class="protection-text">DDOS Protection</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
+        </div>
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="vdi-circle">
+            <h1 class="vdi-text">VDI</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
+        </div>
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="vps-circle">
+            <h1 class="vps-text">VPS/VDS</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
+        </div>
+        <div onclick="return location.href = 'http://www.yandex.ru/'" class="infrastructure-circle">
+            <h1 class="infrastructure-text">Cloud infrastructure</h1>
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted=""
+                       poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv"/>
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm"/>
+                </video>
+            </div>
         </div>
     </div>
+</div>
+<div id="footer">
 
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</div>
 
-    <!-- Load our React component. -->
-	<script src="./Components/Header/Header.js"></script>
-	<script src="./Components/LittleComponents/Button/Button.js"></script>
-    <script>
-        ReactDOM.render(React.createElement(Header, null), document.getElementById('root'));
-    </script>
-	<!-- <script src="./Components/LittleComponents/Button/Button.js"></script> -->
+<!-- Load React. -->
+<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-  </body>
+<!-- Load our React component. -->
+<script src="./Components/Header/Header.js"></script>
+<script src="./Components/Footer/Footer.js"></script>
+<script src="./Components/LittleComponents/Button/Button.js"></script>
+<script>
+    ReactDOM.render(React.createElement(Header, null), document.getElementById('root'));
+    ReactDOM.render(React.createElement(Footer, null), document.getElementById('footer'));
+</script>
+<!-- <script src="./Components/LittleComponents/Button/Button.js"></script> -->
+
+</body>
 </html>

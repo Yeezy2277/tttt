@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Web-site</title>
+    <link rel="stylesheet" href="src/Components/Header/Header.css">
+    <link rel="stylesheet" href="src/Components/Footer/Footer.css">
+    <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
+    <link rel="stylesheet" href="Blog-detalka.css">
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+
+<div id="root">
+    <Header/>
+</div>
+<div class="blog-detalka">
+    <div class="detalka-title">
+        <h1>Zoomtopia 2020: Zoom looks to super-charge videoconferencing</h1>
+        <img src="img/circle.png" alt="circle">
+    </div>
+    <div class="detalka-date">
+        <h1>10.12.20</h1>
+    </div>
+    <hr>
+    <div class="detalka-subtitle">
+        <p>CATEGORY (PRESS)</p>
+        <p>DATE PUBLISHED (10.12.20)</p>
+    </div>
+    <div class="detalka-content">
+        <div class="content-leftBlock">
+            <div class="leftBlock-bigImg">
+                <img src="img/blog-1.png" alt="Block img">
+            </div>
+            <h1>PRESS WORK</h1>
+            <p>Zoomtopia 2020: Zoom looks to super-charge videoconferencing</p>
+            <p>(10.12.20)</p>
+            <div class="leftBlock-img">
+                <img class="facebook" src="icons_SVG/facebook.svg" alt="facebook">
+                <img class="twiiter" src="icons_SVG/twitter.svg" alt="twitter">
+            </div>
+        </div>
+        <div class="content-rightBlock">
+            <p>At its fourth annual Zoomtopia event last week, videoconferencing platform Zoom unveiled a host of new
+                features aimed at improving the in-meeting experience for its more than 300 million daily active
+                participants.</p>
+            <p>With Europe bracing for a second wave and the U.S. still reporting hundreds of daily coronavirus deaths,
+                the proliferation of virtual events and meetings remains a defining features of 2020. Not surprisingly,
+                Zoom says it's adding 100,000 users per quarter and has seen a big jump in stock values this year.</p>
+            <p>Here’s a closer look at what Zoom announced at Zoomtopia 2020.</p>
+            <p>[ Related: Review: 5 top videoconferencing services put to the test ]</p>
+            <h1>The arrival of Zapps</h1>
+            <p>The company highlighted its introduction of Zapps — applications that can be used within Zoom to help
+                improve productivity and create a more engaging experience.</p>
+            <p>According to Zoom, Zapps eliminate the need for users to switch between multiple applications on their
+                desktop, allowing them to quickly streamline permissions, grant document accessibility, and collaborate
+                on screen. The first Zapps will be distributed by the end of year and open to developers shortly
+                thereafter. Both free and paid Zoom users will have access to them.</p>
+            <img src="img/detalka-img.png" alt="Zoomtopia">
+            <p>At its fourth annual Zoomtopia event last week, videoconferencing platform Zoom unveiled a host of new
+                features aimed at improving the in-meeting experience for its more than 300 million daily active
+                participants.</p>
+            <p>With Europe bracing for a second wave and the U.S. still reporting hundreds of daily coronavirus deaths,
+                the proliferation of virtual events and meetings remains a defining features of 2020. Not surprisingly,
+                Zoom says it's adding 100,000 users per quarter and has seen a big jump in stock values this year.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="footer">
+
+</div>
+
+<!-- Load React. -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script src="./Components/LittleComponents/Button/Button.js"></script>
+<script src="./Components/Range/Range.js"></script>
+<script src="./Components/Header/Header.js"></script>
+<script src="./Components/Footer/Footer.js"></script>
+<script>
+    ReactDOM.render(React.createElement(Header, null), document.getElementById('root'));
+    ReactDOM.render(React.createElement(Footer, null), document.getElementById('footer'));
+</script>
+
+</body>
+</html>

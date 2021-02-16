@@ -34,5 +34,3 @@ var Service = function Service() {
         )
     );
 };
-
-ReactDOM.render(React.createElement(Service, null), document.getElementById('root'));
