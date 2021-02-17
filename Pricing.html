@@ -27,7 +27,9 @@
                     </div>
                     <p>150$/M</p>
                 </div>
-                <Range/>
+                <div class="range1">
+                    <Range/>
+                </div>
                 <div class="configText">
                     <div class="configText__item">
                         <p>RAM: 8192 mb</p>
@@ -35,7 +37,9 @@
                     </div>
                     <p>3000$/M</p>
                 </div>
-                <Range/>
+                <div class="range2">
+                    <Range/>
+                </div>
                 <div class="configText">
                     <div class="configText__item">
                         <p>DISK: 110 Gb SSD</p>
@@ -43,7 +47,9 @@
                     </div>
                     <p>330$/M</p>
                 </div>
-                <Range/>
+                <div class="range3">
+                    <Range/>
+                </div>
             </div>
             <div class="os">
                 <div class="osText">
@@ -107,6 +113,9 @@
     <script src="./Components/Header/Header.js"></script>
 	<script>
         ReactDOM.render(React.createElement(Header, null), document.getElementById('header'));
+        ReactDOM.render(React.createElement(Range, null), document.querySelector('.range1'));
+        ReactDOM.render(React.createElement(Range, null), document.querySelector('.range2'));
+        ReactDOM.render(React.createElement(Range, null), document.querySelector('.range3'));
     </script>
 
   </body>
