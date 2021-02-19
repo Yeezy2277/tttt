@@ -16,6 +16,10 @@
     bottom: 120px;
 }
 
+.config u {
+    text-decoration: none;
+}
+
 .configText {
     display: flex;
     justify-content: space-between;

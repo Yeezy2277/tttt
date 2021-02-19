@@ -35,7 +35,7 @@
 }
 
 .faq-description {
-    display: flex;
+    display: none;
 }
 
 .hr-desc {
