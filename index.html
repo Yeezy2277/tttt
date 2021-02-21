@@ -17,8 +17,9 @@
     <div id="root">
         <Header/>
     </div>
+    <main id="swup" class="transition-fade">
     <div class="content">
-        <div onclick="return location.href = 'http://www.yandex.ru/'" class="pricing-circle">
+        <div class="pricing-circle">
             <h1 class="pricing-text">Pricing</h1>
             <div class="page-video">
                 <video class="video" loop="loop" autoplay="" muted=""
@@ -107,6 +108,7 @@
             </div>
         </div>
     </div>
+    </main>
 </div>
 <div id="footer">
 
@@ -117,11 +119,16 @@
 <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="swup.min.js"></script>
+<script>
+    const swup = new Swup();
+</script>
 
 <!-- Load our React component. -->
 <script src="./Components/Header/Header.js"></script>
 <script src="./Components/Footer/Footer.js"></script>
 <script src="./Components/LittleComponents/Button/Button.js"></script>
+<script src="index.js"></script>
 <script>
     ReactDOM.render(React.createElement(Header, null), document.getElementById('root'));
     ReactDOM.render(React.createElement(Footer, null), document.getElementById('footer'));

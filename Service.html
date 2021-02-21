@@ -12,38 +12,9 @@
   <body>
 
     <!-- We will put our React component inside this div. -->
-        <div class="wrapperHead">
-            <div class="leftBlock">
-                <h1>LOGO</h1>
-                <button> <u>ENG</u></button>
-                <button >HEB</button>
-            </div>
-            <div class="rightBlock">
-                <div class="rightLinks">
-                    <a href='/home'>Home</a>
-                    <a href='about'> <u>About</u></a>
-                    <a href='service.html'>Services</a>
-                </div>
-                <div class="rightLinks">
-                    <a href='pricing.html'>Pricing</a>
-                    <a href='blog.html'>Blog</a>
-                    <a href='faq.html'>FAQ</a>
-                    <a href='contact.html'>Contact Us</a>
-                </div>
-                <div>
-                    <div class="btn">
-                        <a href="https://cp.zehost.com">Control Panel</a>
-                    </div>
-                </div>
-                <div class="burger">
-                    <button>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </button>
-                </div>
-            </div>
-        </div>
+<div id="root">
+    <Header/>
+</div>
     <div class="wrapper">
         <img src="https://i.imgur.com/xTfKpg8.png" class="main-img" alt=""/>
         <div class="description">
@@ -68,6 +39,7 @@
 
     <!-- Load our React component. -->
     <script src="./Components/Footer/Footer.js"></script>
+    <script src="./Components/Footer/Header.js"></script>
     <script src="./Components/LittleComponents/Button/Button.js"></script>
 	<script>
         ReactDOM.render(React.createElement(Header, null), document.querySelector('#root'));
