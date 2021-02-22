@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Blog-detalka.css">
     <link rel="stylesheet" href="App.css">
 </head>
-<body>
+<body style="display: none">
 
 <div id="root">
     <Header/>
@@ -81,6 +81,21 @@
 <script src="./Components/Range/Range.js"></script>
 <script src="./Components/Header/Header.js"></script>
 <script src="./Components/Footer/Footer.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        let body = $("body");
+        body.fadeIn(400);
+        $(document).on("click", "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])", function (e) {
+            e.preventDefault();
+            $("body").fadeOut(400);
+            let self = this;
+            setTimeout(function () {
+                window.location.href = $(self).attr("href");
+            }, 400);
+        });
+    });
+</script>
 <script>
     ReactDOM.render(React.createElement(Header, null), document.getElementById('root'));
     ReactDOM.render(React.createElement(Footer, null), document.getElementById('footer'));
