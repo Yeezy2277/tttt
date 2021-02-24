@@ -16,10 +16,26 @@
     <Header/>
 </div>
 <div class="wrapper">
-    <img src="https://i.imgur.com/xTfKpg8.png" class="main-img" alt=""/>
+    <div class="page">
+        <div class="page-video">
+            <video class="video" loop="loop" autoplay="" muted="" poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4" />
+                <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv" />
+                <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm" />
+            </video>
+        </div>
+    </div>
     <div class="description">
         <h1>Cloud infrastructure</h1>
-        <img src="https://i.imgur.com/xTfKpg8.png" class="adaptive-img" alt=""/>
+        <div class="page adaptive-img">
+            <div class="page-video">
+                <video class="video" loop="loop" autoplay="" muted="" poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.mp4" type="video/mp4" />
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv" />
+                    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm" />
+                </video>
+            </div>
+        </div>
         <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
             born and
             I will give you a complete account of the system, and expound the actual teachings of the great
@@ -54,6 +70,7 @@
 <!-- Load our React component. -->
 <script src="./Components/Header/Header.js"></script>
 <script src="./Components/LittleComponents/Button/Button.js"></script>
+<script src="Service.js"></script>
 <script>
     ReactDOM.render(React.createElement(Header, null), document.querySelector('#root'));
 </script>

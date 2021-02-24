@@ -1,13 +1,4 @@
 // VARS==================
-let pricingBlock = document.querySelector(".pricing-circle"),
-    colocationBlock = document.querySelector(".colocation-circle"),
-    parthnersBlock = document.querySelector(".parthners-circle"),
-    benefitsBlock = document.querySelector(".benefits-circle"),
-    protectionBlock = document.querySelector(".protection-circle"),
-    vdiBlock = document.querySelector(".vdi-circle"),
-    vpsBlock = document.querySelector(".vps-circle"),
-    infrastructureBlock = document.querySelector(".infrastructure-circle");
-
 let pricingVideo = document.querySelector(".pricing-circle video"),
     colocationVideo = document.querySelector(".colocation-circle video"),
     parthnersVideo = document.querySelector(".parthners-circle video"),

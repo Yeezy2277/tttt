@@ -1,6 +1,9 @@
+let price1 = document.querySelector(".price1").textContent;
+let price2 = document.querySelector(".price2").textContent;
+let price3 = document.querySelector(".price3").textContent;
+
 const Range1 = (props) => {
     const [editRange, setEditRange] = React.useState(0);
-    let price1 = document.querySelector(".price1").textContent;
     const updateRange = () => {
         let input = document.querySelector(".range1 input");
         let value = document.querySelector(".price1");
@@ -22,7 +25,7 @@ const Range1 = (props) => {
         document.querySelector(".cpu").innerHTML = input.value;
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);
-        console.log(price1);
+        console.log(value);
     }
     return <div>
         <input type="range" min="1" max="4" defaultValue="1" name="range" step="1" onInput={updateRange}/>
@@ -33,6 +36,7 @@ const Range2 = (props) => {
     const [editRange, setEditRange] = React.useState(0);
     const updateRange = () => {
         let input = document.querySelector(".range2 input");
+        let value = document.querySelector(".price2");
         let inputValuePercent;
         switch (input.value) {
             case "1":
@@ -61,7 +65,7 @@ const Range2 = (props) => {
                 break;
 
         }
-        let price = document.querySelector(".price2").innerHTML = input.value * 375;
+        value.innerHTML = String(input.value * Number(price2));
         let cpu = document.querySelector(".ram").innerHTML = input.value * 1024;
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);

@@ -1,6 +1,8 @@
-let language = "eng";
-
-const Title = () => {
-const [lang, setLang] = React.useState(language);
-return lang === "eng" ? data.eng.service.title : lang === "heb" ? data.heb.service.title : ""
-}
+let video = document.querySelector(".page video");
+video.currentTime = localStorage.getItem("infrastructure");
+video.addEventListener("mouseover", () => {
+    video.play();
+})
+video.addEventListener("click", () => {
+    video.pause();
+})
