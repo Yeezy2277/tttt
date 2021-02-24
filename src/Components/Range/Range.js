@@ -1,7 +1,9 @@
 const Range1 = (props) => {
     const [editRange, setEditRange] = React.useState(0);
+    let price1 = document.querySelector(".price1").textContent;
     const updateRange = () => {
         let input = document.querySelector(".range1 input");
+        let value = document.querySelector(".price1");
         let inputValuePercent;
         switch (input.value) {
             case "1":
@@ -16,11 +18,11 @@ const Range1 = (props) => {
             case "4":
                 inputValuePercent = "100";
         }
-        document.querySelector(".price1").innerHTML = input.value * 150;
+        value.innerHTML = String(input.value * Number(price1));
         document.querySelector(".cpu").innerHTML = input.value;
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);
-        console.log(editRange)
+        console.log(price1);
     }
     return <div>
         <input type="range" min="1" max="4" defaultValue="1" name="range" step="1" onInput={updateRange}/>

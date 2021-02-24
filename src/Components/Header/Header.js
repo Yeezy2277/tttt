@@ -18,7 +18,7 @@ const Header = () => {
                 <a href='faq.html'>FAQ</a>
                 <a href='contact.html'>Contact Us</a>
             </div>
-            <div>
+            <div className="header-btn">
                 <Button link={"https://cp.zehost.com"} text={"Control panel"}/>
             </div>
             <div className="burger">

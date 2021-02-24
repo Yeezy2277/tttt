@@ -260,3 +260,7 @@
 html.is-animating .transition-fade {
   opacity: 0;
 }
+
+input, button, textarea {
+  outline: none;
+}

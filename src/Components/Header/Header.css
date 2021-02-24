@@ -73,7 +73,14 @@ button {
     flex-direction: column;
 }
 
-
+@media (max-width: 1230px) {
+    .wrapperHead a {
+        font-size: 11px;
+    }
+    .header-btn a {
+        font-size: 13px;
+    }
+}
 
 @media (max-width: 768px) {
     .burger {

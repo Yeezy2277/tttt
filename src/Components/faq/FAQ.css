@@ -76,7 +76,6 @@
 .faq-mini > button .plus-2 {
     transform: rotate(90deg);
     position: relative;
-    bottom: 10px;
 }
 
 .description-block > button {

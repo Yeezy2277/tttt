@@ -86,7 +86,7 @@ var Header = function Header() {
             ),
             React.createElement(
                 "div",
-                null,
+                { className: "header-btn" },
                 React.createElement(Button, { link: "https://cp.zehost.com", text: "Control panel" })
             ),
             React.createElement(

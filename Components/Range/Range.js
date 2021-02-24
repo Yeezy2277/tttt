@@ -6,8 +6,10 @@ var Range1 = function Range1(props) {
         editRange = _React$useState2[0],
         setEditRange = _React$useState2[1];
 
+    var price1 = document.querySelector(".price1").textContent;
     var updateRange = function updateRange() {
         var input = document.querySelector(".range1 input");
+        var value = document.querySelector(".price1");
         var inputValuePercent = void 0;
         switch (input.value) {
             case "1":
@@ -22,11 +24,11 @@ var Range1 = function Range1(props) {
             case "4":
                 inputValuePercent = "100";
         }
-        document.querySelector(".price1").innerHTML = input.value * 150;
+        value.innerHTML = String(input.value * Number(price1));
         document.querySelector(".cpu").innerHTML = input.value;
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
-        console.log(editRange);
+        console.log(price1);
     };
     return React.createElement(
         "div",

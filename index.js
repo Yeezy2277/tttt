@@ -28,35 +28,13 @@ vdiVideo.currentTime = localStorage.getItem("vdi");
 vpsVideo.currentTime = localStorage.getItem("vps");
 infrastructureVideo.currentTime = localStorage.getItem("infrastructure");
 
-pricingBlock.addEventListener("click", () => {
+setInterval(() => {
     localStorage.setItem("pricing", pricingVideo.currentTime);
-    location.href = 'pricing.html';
-})
-colocationBlock.addEventListener("click", () => {
     localStorage.setItem("colocation", colocationVideo.currentTime);
-    location.href = 'index.html';
-})
-parthnersBlock.addEventListener("click", () => {
     localStorage.setItem("parthners", parthnersVideo.currentTime);
-    location.href = 'index.html';
-})
-benefitsBlock.addEventListener("click", () => {
     localStorage.setItem("benefits", benefitsVideo.currentTime);
-    location.href = 'index.html';
-})
-protectionBlock.addEventListener("click", () => {
     localStorage.setItem("protection", protectionVideo.currentTime);
-    location.href = 'pricing.html';
-})
-vdiBlock.addEventListener("click", () => {
     localStorage.setItem("vdi", vdiVideo.currentTime);
-    location.href = 'pricing.html';
-})
-vpsBlock.addEventListener("click", () => {
     localStorage.setItem("vps", vpsVideo.currentTime);
-    location.href = 'pricing.html';
-})
-infrastructureBlock.addEventListener("click", () => {
     localStorage.setItem("infrastructure", infrastructureVideo.currentTime);
-    location.href = 'index.html';
-})
+},500)

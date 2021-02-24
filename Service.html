@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8" />
-	<title>Web-site</title>
-      <link rel="stylesheet" href="src/Components/Footer/Footer.css">
-      <link rel="stylesheet" href="src/Components/Service/Service.css">
-      <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
-      <link rel="stylesheet" href="App.css">
+    <title>Add React in One Minute</title>
+    <link rel="stylesheet" href="src/Components/Header/Header.css">
+    <link rel="stylesheet" href="src/Components/Service/Service.css">
+    <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
+    <link rel="stylesheet" href="App.css">
 
-  </head>
-  <body style="display: none">
+</head>
+<body>
 
-    <!-- We will put our React component inside this div. -->
+<!-- We will put our React component inside this div. -->
 <div id="root">
     <Header/>
 </div>
-    <div class="wrapper">
-        <img src="https://i.imgur.com/xTfKpg8.png" class="main-img" alt=""/>
-        <div class="description">
-            <h1></h1>
-            <img src="https://i.imgur.com/xTfKpg8.png" class="adaptive-img" alt=""/>
-            <p></p>
-            <p></p>
-            <div class="btn">
-                <a href="/contacts"></a>
-                <a href="https://cp.zehost.com/"></a>
-            </div>
+<div class="wrapper">
+    <img src="https://i.imgur.com/xTfKpg8.png" class="main-img" alt=""/>
+    <div class="description">
+        <h1>Cloud infrastructure</h1>
+        <img src="https://i.imgur.com/xTfKpg8.png" class="adaptive-img" alt=""/>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+            born and
+            I will give you a complete account of the system, and expound the actual teachings of the great
+            explorer
+            of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+            itself,
+            because it is pleasure, but because those who do not know how to pursue pleasure rationally
+            encounter consequences
+            that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain
+            of itself,
+            because it is pain, but because occasionally circumstances occur in which toil and pain can procure
+            him some great
+            pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except
+            to obtain some
+            advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure
+            that has no annoying
+            consequences, or one who avoids a pain that produces no resultant pleasure?<br/><br/>
+            But I must explain to you how all this mistaken idea of denouncing pleasure </p>
+        <div class="btn">
+            <a href="/contacts">Contact US</a>
+            <a href="https://cp.zehost.com/">Registration US</a>
         </div>
     </div>
+</div>
 
-    <div id="footer">
+<!-- Load React. -->
+<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-    </div>
-
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-    <!-- Load our React component. -->
-    <script src="./Components/Footer/Footer.js"></script>
-    <script src="./Components/Footer/Header.js"></script>
-    <script src="./Components/LittleComponents/Button/Button.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            let body = $("body");
-            body.fadeIn(400);
-            $(document).on("click", "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])", function (e) {
-                e.preventDefault();
-                $("body").fadeOut(400);
-                let self = this;
-                setTimeout(function () {
-                    window.location.href = $(self).attr("href");
-                }, 400);
-            });
+<!-- Load our React component. -->
+<script src="./Components/Header/Header.js"></script>
+<script src="./Components/LittleComponents/Button/Button.js"></script>
+<script>
+    ReactDOM.render(React.createElement(Header, null), document.querySelector('#root'));
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        let body = $("body");
+        body.fadeIn(400);
+        $(document).on("click", "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])", function (e) {
+            e.preventDefault();
+            $("body").fadeOut(400);
+            let self = this;
+            setTimeout(function () {
+                window.location.href = $(self).attr("href");
+            }, 400);
         });
-    </script>
-	<script>
-        ReactDOM.render(React.createElement(Header, null), document.querySelector('#root'));
-        ReactDOM.render(React.createElement(Footer, null), document.querySelector('#footer'));
-    </script>
+    });
+</script>
 
-  </body>
+</body>
 </html>
