@@ -2,6 +2,8 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 var price1 = document.querySelector(".price1").textContent;
 var price2 = document.querySelector(".price2").textContent;
+var ram = document.querySelector(".ram").textContent;
+var disk = document.querySelector(".disk").textContent;
 var price3 = document.querySelector(".price3").textContent;
 
 var Range1 = function Range1(props) {
@@ -16,16 +18,11 @@ var Range1 = function Range1(props) {
         var inputValuePercent = void 0;
         switch (input.value) {
             case "1":
-                inputValuePercent = "5";
+                inputValuePercent = "1";
                 break;
             case "2":
-                inputValuePercent = "37";
-                break;
-            case "3":
-                inputValuePercent = "65";
-                break;
-            case "4":
                 inputValuePercent = "100";
+                break;
         }
         value.innerHTML = String(input.value * Number(price1));
         document.querySelector(".cpu").innerHTML = input.value;
@@ -36,7 +33,7 @@ var Range1 = function Range1(props) {
     return React.createElement(
         "div",
         null,
-        React.createElement("input", { type: "range", min: "1", max: "4", defaultValue: "1", name: "range", step: "1", onInput: updateRange })
+        React.createElement("input", { type: "range", min: "1", max: "2", defaultValue: "1", name: "range", step: "1", onInput: updateRange, onChange: updateRange })
     );
 };
 
@@ -48,37 +45,23 @@ var Range2 = function Range2(props) {
 
     var updateRange = function updateRange() {
         var input = document.querySelector(".range2 input");
-        var value = document.querySelector(".price2");
+        var valuePrice = document.querySelector(".price2");
+        var valueRam = document.querySelector(".ram");
         var inputValuePercent = void 0;
         switch (input.value) {
             case "1":
                 inputValuePercent = "5";
                 break;
             case "2":
-                inputValuePercent = "15";
+                inputValuePercent = "50";
                 break;
             case "3":
-                inputValuePercent = "28";
-                break;
-            case "4":
-                inputValuePercent = "42";
-                break;
-            case "5":
-                inputValuePercent = "55";
-                break;
-            case "6":
-                inputValuePercent = "68";
-                break;
-            case "7":
-                inputValuePercent = "83";
-                break;
-            case "8":
                 inputValuePercent = "100";
                 break;
 
         }
-        value.innerHTML = String(input.value * Number(price2));
-        var cpu = document.querySelector(".ram").innerHTML = input.value * 1024;
+        valuePrice.innerHTML = String(input.value * Number(price2));
+        valueRam.innerHTML = String(input.value * Number(ram));
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
         console.log(editRange);
@@ -86,7 +69,7 @@ var Range2 = function Range2(props) {
     return React.createElement(
         "div",
         null,
-        React.createElement("input", { type: "range", min: "1", max: "8", defaultValue: "1", name: "range", step: "1", onInput: updateRange })
+        React.createElement("input", { type: "range", min: "1", max: "3", defaultValue: "1", name: "range", step: "1", onInput: updateRange, onChange: updateRange })
     );
 };
 
@@ -98,22 +81,76 @@ var Range3 = function Range3(props) {
 
     var updateRange = function updateRange() {
         var input = document.querySelector(".range3 input");
+        var valuePrice = document.querySelector(".price3");
+        var valueDisk = document.querySelector(".disk");
         var inputValuePercent = void 0;
         switch (input.value) {
             case "1":
                 inputValuePercent = "5";
                 break;
             case "2":
-                inputValuePercent = "37";
+                inputValuePercent = "10";
                 break;
             case "3":
-                inputValuePercent = "65";
+                inputValuePercent = "15";
                 break;
             case "4":
+                inputValuePercent = "19";
+                break;
+            case "5":
+                inputValuePercent = "24";
+                break;
+            case "6":
+                inputValuePercent = "28";
+                break;
+            case "7":
+                inputValuePercent = "33";
+                break;
+            case "8":
+                inputValuePercent = "38";
+                break;
+            case "9":
+                inputValuePercent = "40";
+                break;
+            case "10":
+                inputValuePercent = "44";
+                break;
+            case "11":
+                inputValuePercent = "48";
+                break;
+            case "12":
+                inputValuePercent = "52";
+                break;
+            case "13":
+                inputValuePercent = "60";
+                break;
+            case "14":
+                inputValuePercent = "66";
+                break;
+            case "15":
+                inputValuePercent = "70";
+                break;
+            case "16":
+                inputValuePercent = "74";
+                break;
+            case "17":
+                inputValuePercent = "78";
+                break;
+            case "18":
+                inputValuePercent = "82";
+                break;
+            case "19":
+                inputValuePercent = "86";
+                break;
+            case "20":
+                inputValuePercent = "90";
+                break;
+            case "21":
                 inputValuePercent = "100";
+                break;
         }
-        var price = document.querySelector(".price3").innerHTML = input.value * 875;
-        var cpu = document.querySelector(".disk").innerHTML = input.value * 110;
+        valuePrice.innerHTML = String(input.value * Number(price3));
+        valueDisk.innerHTML = String(input.value * Number(disk));
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
         console.log(editRange);
@@ -121,6 +158,6 @@ var Range3 = function Range3(props) {
     return React.createElement(
         "div",
         null,
-        React.createElement("input", { type: "range", min: "1", max: "4", defaultValue: "0", name: "range", step: "1", onInput: updateRange })
+        React.createElement("input", { type: "range", min: "1", max: "21", defaultValue: "1", name: "range", step: "1", onInput: updateRange, onChange: updateRange })
     );
 };

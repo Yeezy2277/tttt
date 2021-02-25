@@ -1,8 +1,10 @@
 let video = document.querySelector(".page video");
+let block = document.querySelector(".page");
 video.currentTime = localStorage.getItem("infrastructure");
-video.addEventListener("mouseover", () => {
+video.pause();
+block.addEventListener("mouseover", () => {
     video.play();
 })
-video.addEventListener("click", () => {
+block.addEventListener("mouseout", () => {
     video.pause();
 })

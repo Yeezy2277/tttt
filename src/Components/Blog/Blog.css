@@ -59,3 +59,15 @@
     padding-left: 20px;
     width: 56%;
 }
+
+@media (max-width: 768px) {
+    .blog-text h1 {
+        font-size: 16px;
+    }
+    .blog__item img {
+        width: 65%;
+    }
+    .blog-text img {
+        align-self: center;
+    }
+}

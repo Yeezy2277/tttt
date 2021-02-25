@@ -27,8 +27,17 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-moz-range-track {
     -moz-appearance: none;
     outline: none;
-    background: -moz-linear-gradient(left, #ee0023 0%, #ee0023 50%, #fff 50%, #fff 100%);
+    background: #000;
     height: 3px;
+}
+input[type=range]::-moz-range-progress {
+    background: #ee0023;
+}
+
+@media (max-width: 1360px) {
+    input[type=range] {
+        width: 400px;
+    }
 }
 
 @media (max-width: 320px) {

@@ -20,6 +20,10 @@
     text-decoration: none;
 }
 
+.config{
+    padding-left: 30px;
+}
+
 .configText {
     display: flex;
     justify-content: space-between;
@@ -120,6 +124,25 @@ hr {
 
 .discount, .payment, .order button {
     margin-right: 80px;
+}
+
+@media (max-width: 1600px) {
+    .bigText h1{
+        font-size: 90px;
+    }
+
+    .configTitle {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1326px) {
+    .os h1, .config h1{
+        font-size: 18px;
+    }
+    .os p {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 768px) {

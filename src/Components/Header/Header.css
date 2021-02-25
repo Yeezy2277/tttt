@@ -77,11 +77,22 @@ button {
     .wrapperHead a {
         font-size: 11px;
     }
-    .header-btn a {
-        font-size: 13px;
+
+    .leftBlock a {
+        margin-left: 20px;
     }
 }
 
+@media (max-width: 955px) {
+    .rightLinks {
+        margin-left: 8px;
+    }
+
+    .wrapperHead a {
+        font-size: 8px;
+    }
+
+}
 @media (max-width: 768px) {
     .burger {
         display: block;

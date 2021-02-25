@@ -9,3 +9,10 @@
     border-radius: 15px;
     font-size: 11px;
 }
+
+@media (max-width: 1080px) {
+    .btn a {
+        padding: 10px 30px;
+        font-size: 8px;
+    }
+}

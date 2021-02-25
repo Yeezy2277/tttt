@@ -1,5 +1,12 @@
-body {
-    background: url("img/background.png") no-repeat;
+html {
+    background-image: url("img/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .content {
@@ -28,11 +35,6 @@ body {
 .pricing-circle, .colocation-circle, .parthners-circle, .benefits-circle, .protection-circle, .vdi-circle, .vps-circle, .infrastructure-circle {
     position: absolute;
     cursor: pointer;
-}
-
-.pricing-circle {
-    min-height: 10vh;
-    width: 250px;
 }
 
 .page-video {
@@ -181,8 +183,9 @@ body {
 }
 
 @media (max-width: 1600px) {
-    .content img{
-        width: 85%;
+    .page-video {
+        width: 200px;
+        height: 200px;
     }
 
     .content h1 {
@@ -192,14 +195,17 @@ body {
 
 }
 
+@media (max-width: 1360px) {
+    .page-video {
+        width: 150px;
+        height: 150px;
+    }
+}
+
 @media (max-width: 768px) {
     .content {
         display: flex;
         flex-direction: column;
-    }
-
-    .pricing-circle, .colocation-circle, .parthners-circle, .benefits-circle, .protection-circle, .vdi-circle, .vps-circle, .infrastructure-circle {
-        position: static;
     }
     img {
         width: 150px;
