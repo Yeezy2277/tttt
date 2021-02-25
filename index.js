@@ -6,7 +6,9 @@ let pricingVideo = document.querySelector(".pricing-circle video"),
     protectionVideo = document.querySelector(".protection-circle video"),
     vdiVideo = document.querySelector(".vdi-circle video"),
     vpsVideo = document.querySelector(".vps-circle video"),
-    infrastructureVideo = document.querySelector(".infrastructure-circle video");
+    infrastructureVideo = document.querySelector(".infrastructure-circle video"),
+
+    pageVideo = document.querySelector(".page-video");
 //===================//
 
 

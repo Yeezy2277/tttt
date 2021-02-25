@@ -88,6 +88,9 @@
         <div>
             <hr/>
         </div>
+        <div class="step">
+            <Step/>
+        </div>
         <div class="order">
             <div class="orderText">
                 <div class="discount">
@@ -124,6 +127,7 @@
     <script src="./Components/LittleComponents/Button/Button.js"></script>
     <script src="./Components/Range/Range.js"></script>
     <script src="./Components/Header/Header.js"></script>
+    <script src="Pricing.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -144,6 +148,7 @@
         ReactDOM.render(React.createElement(Range1, null), document.querySelector('.range1'));
         ReactDOM.render(React.createElement(Range2, null), document.querySelector('.range2'));
         ReactDOM.render(React.createElement(Range3, null), document.querySelector('.range3'));
+        ReactDOM.render(React.createElement(Step, null), document.querySelector('.step'));
     </script>
 
   </body>

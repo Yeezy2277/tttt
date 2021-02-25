@@ -1,8 +1,39 @@
 let price1 = document.querySelector(".price1").textContent;
 let price2 = document.querySelector(".price2").textContent;
+let cpu = document.querySelector(".cpu").textContent;
 let ram = document.querySelector(".ram").textContent;
 let disk = document.querySelector(".disk").textContent;
 let price3 = document.querySelector(".price3").textContent;
+
+const Step = () => {
+    const [cpu, setCpu] = React.useState(0);
+    const [ram, setRam] = React.useState(0);
+    const [disk, setDisk] = React.useState(0);
+    const updateCpu = (evt) => {
+        setCpu(evt.target.value);
+    }
+    const updateRam = (evt) => {
+        setRam(evt.target.value);
+    }
+    const updateDisk = (evt) => {
+        setDisk(evt.target.value);
+    }
+    const updateStep = () => {
+        localStorage.setItem("cpu", cpu);
+        localStorage.setItem("ram", ram);
+        localStorage.setItem("disk", disk);
+    }
+    return <div className="step">
+        <h1>Размер шага</h1>
+        <p>CPU</p>
+        <input type="text" onChange={updateCpu}/>
+        <p>RAM</p>
+        <input type="text" onChange={updateRam}/>
+        <p>DISK</p>
+        <input type="text" onChange={updateDisk}/>
+        <button onClick={updateStep}>Add</button>
+    </div>
+}
 
 const Range1 = (props) => {
     const [editRange, setEditRange] = React.useState(0);
@@ -19,7 +50,7 @@ const Range1 = (props) => {
                 break;
         }
         value.innerHTML = String(input.value * Number(price1));
-        document.querySelector(".cpu").innerHTML = input.value;
+        document.querySelector(".cpu").innerHTML = Number(cpu) + Number(localStorage.getItem("cpu"));
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);
         console.log(value);
@@ -49,7 +80,7 @@ const Range2 = (props) => {
 
         }
         valuePrice.innerHTML = String(input.value * Number(price2));
-        valueRam.innerHTML = String(input.value * Number(ram));
+        valueRam.innerHTML = String(Number(ram) + Number(localStorage.getItem("ram")));
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);
         console.log(editRange)
@@ -132,7 +163,7 @@ const Range3 = (props) => {
                 break;
         }
         valuePrice.innerHTML = String(input.value * Number(price3));
-        valueDisk.innerHTML = String(input.value * Number(disk));
+        valueDisk.innerHTML = String(Number(input.value) + Number(localStorage.getItem("disk")));
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);
         console.log(editRange)

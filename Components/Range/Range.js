@@ -2,15 +2,80 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 var price1 = document.querySelector(".price1").textContent;
 var price2 = document.querySelector(".price2").textContent;
+var cpu = document.querySelector(".cpu").textContent;
 var ram = document.querySelector(".ram").textContent;
 var disk = document.querySelector(".disk").textContent;
 var price3 = document.querySelector(".price3").textContent;
 
-var Range1 = function Range1(props) {
+var Step = function Step() {
     var _React$useState = React.useState(0),
         _React$useState2 = _slicedToArray(_React$useState, 2),
-        editRange = _React$useState2[0],
-        setEditRange = _React$useState2[1];
+        cpu = _React$useState2[0],
+        setCpu = _React$useState2[1];
+
+    var _React$useState3 = React.useState(0),
+        _React$useState4 = _slicedToArray(_React$useState3, 2),
+        ram = _React$useState4[0],
+        setRam = _React$useState4[1];
+
+    var _React$useState5 = React.useState(0),
+        _React$useState6 = _slicedToArray(_React$useState5, 2),
+        disk = _React$useState6[0],
+        setDisk = _React$useState6[1];
+
+    var updateCpu = function updateCpu(evt) {
+        setCpu(evt.target.value);
+    };
+    var updateRam = function updateRam(evt) {
+        setRam(evt.target.value);
+    };
+    var updateDisk = function updateDisk(evt) {
+        setDisk(evt.target.value);
+    };
+    var updateStep = function updateStep() {
+        localStorage.setItem("cpu", cpu);
+        localStorage.setItem("ram", ram);
+        localStorage.setItem("disk", disk);
+    };
+    return React.createElement(
+        "div",
+        { className: "step" },
+        React.createElement(
+            "h1",
+            null,
+            "\u0420\u0430\u0437\u043C\u0435\u0440 \u0448\u0430\u0433\u0430"
+        ),
+        React.createElement(
+            "p",
+            null,
+            "CPU"
+        ),
+        React.createElement("input", { type: "text", onChange: updateCpu }),
+        React.createElement(
+            "p",
+            null,
+            "RAM"
+        ),
+        React.createElement("input", { type: "text", onChange: updateRam }),
+        React.createElement(
+            "p",
+            null,
+            "DISK"
+        ),
+        React.createElement("input", { type: "text", onChange: updateDisk }),
+        React.createElement(
+            "button",
+            { onClick: updateStep },
+            "Add"
+        )
+    );
+};
+
+var Range1 = function Range1(props) {
+    var _React$useState7 = React.useState(0),
+        _React$useState8 = _slicedToArray(_React$useState7, 2),
+        editRange = _React$useState8[0],
+        setEditRange = _React$useState8[1];
 
     var updateRange = function updateRange() {
         var input = document.querySelector(".range1 input");
@@ -25,7 +90,7 @@ var Range1 = function Range1(props) {
                 break;
         }
         value.innerHTML = String(input.value * Number(price1));
-        document.querySelector(".cpu").innerHTML = input.value;
+        document.querySelector(".cpu").innerHTML = Number(cpu) + Number(localStorage.getItem("cpu"));
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
         console.log(value);
@@ -38,10 +103,10 @@ var Range1 = function Range1(props) {
 };
 
 var Range2 = function Range2(props) {
-    var _React$useState3 = React.useState(0),
-        _React$useState4 = _slicedToArray(_React$useState3, 2),
-        editRange = _React$useState4[0],
-        setEditRange = _React$useState4[1];
+    var _React$useState9 = React.useState(0),
+        _React$useState10 = _slicedToArray(_React$useState9, 2),
+        editRange = _React$useState10[0],
+        setEditRange = _React$useState10[1];
 
     var updateRange = function updateRange() {
         var input = document.querySelector(".range2 input");
@@ -61,7 +126,7 @@ var Range2 = function Range2(props) {
 
         }
         valuePrice.innerHTML = String(input.value * Number(price2));
-        valueRam.innerHTML = String(input.value * Number(ram));
+        valueRam.innerHTML = String(Number(ram) + Number(localStorage.getItem("ram")));
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
         console.log(editRange);
@@ -74,10 +139,10 @@ var Range2 = function Range2(props) {
 };
 
 var Range3 = function Range3(props) {
-    var _React$useState5 = React.useState(0),
-        _React$useState6 = _slicedToArray(_React$useState5, 2),
-        editRange = _React$useState6[0],
-        setEditRange = _React$useState6[1];
+    var _React$useState11 = React.useState(0),
+        _React$useState12 = _slicedToArray(_React$useState11, 2),
+        editRange = _React$useState12[0],
+        setEditRange = _React$useState12[1];
 
     var updateRange = function updateRange() {
         var input = document.querySelector(".range3 input");
@@ -150,7 +215,7 @@ var Range3 = function Range3(props) {
                 break;
         }
         valuePrice.innerHTML = String(input.value * Number(price3));
-        valueDisk.innerHTML = String(input.value * Number(disk));
+        valueDisk.innerHTML = String(Number(input.value) + Number(localStorage.getItem("disk")));
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
         console.log(editRange);
