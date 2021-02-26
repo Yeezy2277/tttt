@@ -1,26 +1,26 @@
-let faqMini1 = document.querySelector(".faq-1 .faq-mini");
-let faqMini2 = document.querySelector(".faq-2 .faq-mini");
-let faqMini3 = document.querySelector(".faq-3 .faq-mini");
-let faqMini4 = document.querySelector(".faq-4 .faq-mini");
-let faqMini5 = document.querySelector(".faq-5 .faq-mini");
+let faqMini1 = document.querySelector("#faq-1 .faq-mini");
+let faqMini2 = document.querySelector("#faq-2 .faq-mini");
+let faqMini3 = document.querySelector("#faq-3 .faq-mini");
+let faqMini4 = document.querySelector("#faq-4 .faq-mini");
+let faqMini5 = document.querySelector("#faq-5 .faq-mini");
 
-let faqLarge1 = document.querySelector(".faq-1 .faq-description");
-let faqLarge2 = document.querySelector(".faq-2 .faq-description");
-let faqLarge3 = document.querySelector(".faq-3 .faq-description");
-let faqLarge4 = document.querySelector(".faq-4 .faq-description");
-let faqLarge5 = document.querySelector(".faq-5 .faq-description");
+let faqLarge1 = document.querySelector("#faq-1 .faq-description");
+let faqLarge2 = document.querySelector("#faq-2 .faq-description");
+let faqLarge3 = document.querySelector("#faq-3 .faq-description");
+let faqLarge4 = document.querySelector("#faq-4 .faq-description");
+let faqLarge5 = document.querySelector("#faq-5 .faq-description");
 
-let btnMini1 = document.querySelector(".faq-1 .faq-mini button");
-let btnMini2 = document.querySelector(".faq-2 .faq-mini button");
-let btnMini3 = document.querySelector(".faq-3 .faq-mini button");
-let btnMini4 = document.querySelector(".faq-4 .faq-mini button");
-let btnMini5 = document.querySelector(".faq-5 .faq-mini button");
+let btnMini1 = document.querySelector("#faq-1 .faq-mini button");
+let btnMini2 = document.querySelector("#faq-2 .faq-mini button");
+let btnMini3 = document.querySelector("#faq-3 .faq-mini button");
+let btnMini4 = document.querySelector("#faq-4 .faq-mini button");
+let btnMini5 = document.querySelector("#faq-5 .faq-mini button");
 
-let btnLarge1 = document.querySelector(".faq-1 .faq-description button");
-let btnLarge2 = document.querySelector(".faq-2 .faq-description button");
-let btnLarge3 = document.querySelector(".faq-3 .faq-description button");
-let btnLarge4 = document.querySelector(".faq-4 .faq-description button");
-let btnLarge5 = document.querySelector(".faq-5 .faq-description button");
+let btnLarge1 = document.querySelector("#faq-1 .faq-description button");
+let btnLarge2 = document.querySelector("#faq-2 .faq-description button");
+let btnLarge3 = document.querySelector("#faq-3 .faq-description button");
+let btnLarge4 = document.querySelector("#faq-4 .faq-description button");
+let btnLarge5 = document.querySelector("#faq-5 .faq-description button");
 
 function mini() {
     faqLarge1.style.display = "none";

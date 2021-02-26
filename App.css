@@ -264,3 +264,7 @@ html.is-animating .transition-fade {
 input, button, textarea {
   outline: none;
 }
+
+body {
+  overflow-x: hidden;
+}

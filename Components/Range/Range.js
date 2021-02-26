@@ -2,11 +2,13 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 var price1 = document.querySelector(".price1").textContent;
 var price2 = document.querySelector(".price2").textContent;
-var cpu = document.querySelector(".cpu").textContent;
 var ram = document.querySelector(".ram").textContent;
+var cpu = Number(document.querySelector(".cpu").textContent);
+var cpuValue = Number(localStorage.getItem("cpu"));
+var ramValue = Number(localStorage.getItem("disk"));
+var diskValue = Number(localStorage.getItem("disk"));
 var disk = document.querySelector(".disk").textContent;
 var price3 = document.querySelector(".price3").textContent;
-
 var Step = function Step() {
     var _React$useState = React.useState(0),
         _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -25,9 +27,61 @@ var Step = function Step() {
 
     var updateCpu = function updateCpu(evt) {
         setCpu(evt.target.value);
+        document.querySelector(".cpu").innerHTML = String(evt.target.value);
+        var input = document.querySelector(".range1 input");
+        var value = document.querySelector(".price1");
+        var cpuField = document.querySelector(".cpu");
+        var inputValuePercent = void 0;
+        value.innerHTML = String(evt.target.value * Number(price1));
+        cpuField.textContent = input.value;
+        cpuField.innerHTML = cpu;
+        switch (evt.target.value) {
+            case "1":
+                inputValuePercent = "1";
+                break;
+            case "2":
+                inputValuePercent = "35";
+                break;
+            case "3":
+                inputValuePercent = "55";
+                break;
+            case "4":
+                inputValuePercent = "67";
+                break;
+            case "5":
+                inputValuePercent = "88";
+                break;
+        }
+        evt.target.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
     };
     var updateRam = function updateRam(evt) {
         setRam(evt.target.value);
+        document.querySelector(".ram").innerHTML = String(evt.target.value);
+        var input = document.querySelector(".range2 input");
+        var value = document.querySelector(".price2");
+        var ramField = document.querySelector(".ram");
+        var inputValuePercent = void 0;
+        value.innerHTML = String(evt.target.value * Number(price2));
+        ramField.textContent = input.value;
+        ramField.innerHTML = ram;
+        switch (evt.target.value) {
+            case "1":
+                inputValuePercent = "1";
+                break;
+            case "2":
+                inputValuePercent = "35";
+                break;
+            case "3":
+                inputValuePercent = "55";
+                break;
+            case "4":
+                inputValuePercent = "67";
+                break;
+            case "5":
+                inputValuePercent = "88";
+                break;
+        }
+        evt.target.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
     };
     var updateDisk = function updateDisk(evt) {
         setDisk(evt.target.value);
@@ -80,25 +134,46 @@ var Range1 = function Range1(props) {
     var updateRange = function updateRange() {
         var input = document.querySelector(".range1 input");
         var value = document.querySelector(".price1");
+        var cpuField = document.querySelector(".cpu");
         var inputValuePercent = void 0;
         switch (input.value) {
             case "1":
                 inputValuePercent = "1";
                 break;
             case "2":
+                inputValuePercent = "20";
+                break;
+            case "3":
+                inputValuePercent = "100";
+                break;
+            case "4":
+                inputValuePercent = "100";
+                break;
+            case "5":
+                inputValuePercent = "100";
+                break;
+            case "6":
+                inputValuePercent = "77";
+                break;
+            case "7":
+                inputValuePercent = "88";
+                break;
+            case "8":
                 inputValuePercent = "100";
                 break;
         }
         value.innerHTML = String(input.value * Number(price1));
-        document.querySelector(".cpu").innerHTML = Number(cpu) + Number(localStorage.getItem("cpu"));
+        cpu = Number(input.value);
+        cpuField.innerHTML = cpu;
+        // нужно чтоб прибавлялось в зависимости от шага
+        // нужно чтоб по идее зависело от шага, или я хз для чего про них в тз написаны
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
-        setEditRange(input.value);
-        console.log(value);
+        // setEditRange(cpuField);
     };
     return React.createElement(
         "div",
         null,
-        React.createElement("input", { type: "range", min: "1", max: "2", defaultValue: "1", name: "range", step: "1", onInput: updateRange, onChange: updateRange })
+        React.createElement("input", { type: "range", min: "1", max: "8", defaultValue: "1", name: "range", step: "1", onInput: updateRange, onChange: updateRange })
     );
 };
 
@@ -129,7 +204,6 @@ var Range2 = function Range2(props) {
         valueRam.innerHTML = String(Number(ram) + Number(localStorage.getItem("ram")));
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
-        console.log(editRange);
     };
     return React.createElement(
         "div",
@@ -218,7 +292,6 @@ var Range3 = function Range3(props) {
         valueDisk.innerHTML = String(Number(input.value) + Number(localStorage.getItem("disk")));
         input.style.background = "-webkit-linear-gradient(left, #ee0023 0%, #ee0023 " + inputValuePercent + "%, #000 " + inputValuePercent + "%, #000 100%)";
         setEditRange(input.value);
-        console.log(editRange);
     };
     return React.createElement(
         "div",
