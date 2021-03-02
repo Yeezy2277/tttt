@@ -1,57 +1,41 @@
 let price1 = document.querySelector(".price1").textContent;
 let price2 = document.querySelector(".price2").textContent;
-let ram = Number(document.querySelector(".ram").textContent);
-let cpu = Number(document.querySelector(".cpu").textContent);
-let cpuValue = Number(localStorage.getItem("cpu"));
-let ramValue = Number(localStorage.getItem("ram"));
-let diskValue = Number(localStorage.getItem("disk"));
-let disk = Number(document.querySelector(".disk").textContent);
+
+let cpu = document.querySelector(".cpu").textContent;
+let ram = document.querySelector(".ram").textContent;
+let disk = document.querySelector(".disk").textContent;
+
+let cpuStep = Number(document.querySelector("#cpuStep").textContent);
+let ramStep = Number(document.querySelector("#ramStep").textContent);
+let diskStep = Number(document.querySelector("#diskStep").textContent);
+
+let cpuField = document.querySelector(".cpu");
+let ramField = document.querySelector(".ram");
+let diskField = document.querySelector(".disk");
+
 let price3 = document.querySelector(".price3").textContent;
-const Step = () => {
-    const [cpu, setCpu] = React.useState(0);
-    const [ram, setRam] = React.useState(0);
-    const [disk, setDisk] = React.useState(0);
-    const updateCpu = (evt) => {
-        setCpu(evt.target.value);
-    }
-    const updateRam = (evt) => {
-        setRam(evt.target.value);
-    }
-    const updateDisk = (evt) => {
-        setDisk(evt.target.value);
-    }
-    const updateStep = () => {
-        localStorage.setItem("cpu", cpu);
-        localStorage.setItem("ram", ram);
-        localStorage.setItem("disk", disk);
-    }
-    return <div>
-        <div className="step">
-            <h1>Значения шага</h1>
-            <p>CPU</p>
-            <input type="text" onChange={updateCpu}/>
-            <p>RAM</p>
-            <input type="text" onChange={updateRam}/>
-            <p>DISK</p>
-            <input type="text" onChange={updateDisk}/>
-            <button onClick={updateStep}>Add</button>
-        </div>
-    </div>
-}
+
+let cpuArr = cpu.split('[').join('').split(')').join('').split(',');
+let ramArr = ram.split('[').join('').split(')').join('').split(',');
+let diskArr = disk.split('[').join('').split(')').join('').split(',');
+cpuField.innerHTML = cpuArr[0];
+ramField.innerHTML = ramArr[0];
+diskField.innerHTML = diskArr[0];
+
 const Range1 = (props) => {
-    const [editRange, setEditRange] = React.useState(0);
+	const [editRange, setEditRange] = React.useState(0);
+	cpu.innerHTML = cpuArr[0];
     const updateRange = () => {
         let input = document.querySelector(".range1 input");
         let value = document.querySelector(".price1");
-        let cpuField = document.querySelector(".cpu");
-        let inputValuePercent = (Number(input.value)*100)/40;
+        let inputValuePercent = (Number(input.value)*100)/cpuArr[1];
         value.innerHTML = String(input.value * Number(price1));
         cpu = Number(input.value);
-        cpuField.innerHTML = cpu;
+		cpuField.innerHTML = cpu;
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
     }
     return <div>
-        <input type="range" min={cpu} max="40" defaultValue="1" name="range" step={cpuValue} onInput={updateRange} onChange={updateRange}/>
+        <input type="range" min={cpuArr[0]} max={cpuArr[1]} defaultValue="1" name="range" step={cpuStep} onInput={updateRange} onChange={updateRange}/>
     </div>
 }
 
@@ -60,15 +44,14 @@ const Range2 = (props) => {
     const updateRange = () => {
         let input = document.querySelector(".range2 input");
         let valuePrice = document.querySelector(".price2");
-        let valueRam = document.querySelector(".ram");
-        let inputValuePercent = (Number(input.value)*100)/512;
-        valuePrice.innerHTML = String(input.value * (Number(price2)/Number(ram)));
-        valueRam.innerHTML = input.value;
+        let inputValuePercent = (Number(input.value)*100)/ramArr[1];
+        valuePrice.innerHTML = String(input.value * (Number(price2)/Number(ramArr[0])));
+        ramField.innerHTML = input.value;
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);
     }
     return <div>
-        <input type="range" min={ram} max="512" defaultValue="1" name="range" step={ramValue} onInput={updateRange} onChange={updateRange}/>
+        <input type="range" min={ramArr[0]} max={ramArr[1]} defaultValue="1" name="range" step={ramStep} onInput={updateRange} onChange={updateRange}/>
     </div>
 }
 
@@ -77,14 +60,13 @@ const Range3 = (props) => {
     const updateRange = () => {
         let input = document.querySelector(".range3 input");
         let valuePrice = document.querySelector(".price3");
-        let valueDisk = document.querySelector(".disk");
-        let inputValuePercent = (Number(input.value)*100)/4096;
-        valuePrice.innerHTML = String(input.value * (Number(price3)/Number(disk)));
-        valueDisk.innerHTML = Number(input.value);
+        let inputValuePercent = (Number(input.value)*100)/diskArr[1];
+        valuePrice.innerHTML = String(input.value * (Number(price3)/Number(diskArr[0])));
+        diskField.innerHTML = input.value;
         input.style.background = `-webkit-linear-gradient(left, #ee0023 0%, #ee0023 ${inputValuePercent}%, #000 ${inputValuePercent}%, #000 100%)`
         setEditRange(input.value);
     }
     return <div>
-        <input type="range" min={disk} max="4096" defaultValue="1" name="range" step={diskValue} onInput={updateRange} onChange={updateRange}/>
+        <input type="range" min={diskArr[0]} max={diskArr[1]} defaultValue="1" name="range" step={diskStep} onInput={updateRange} onChange={updateRange}/>
     </div>
 }

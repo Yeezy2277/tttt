@@ -1,5 +1,5 @@
 input[type=range] {
-    width: 500px;
+    width: 400px;
     -webkit-appearance: none;
     outline: none;
     background: -webkit-linear-gradient(left, #ee0023 0%, #ee0023 5%, #000 5%, #000 100%);

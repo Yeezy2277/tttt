@@ -3,6 +3,16 @@
     flex-direction: column;
 }
 
+select {
+    border: none;
+    font-family: "Futura PT Demi", serif;
+    font-size: 22px;
+    padding-right: 0;
+    text-decoration: underline;
+    outline: none;
+    cursor: pointer;
+}
+
 .wrapper {
     display: flex;
     justify-content: space-around;
@@ -11,7 +21,7 @@
 
 .bigText h1{
     font-size: 120px;
-    font-family: "Futura PT";
+    font-family: "Futura PT", serif;
     position: relative;
     bottom: 120px;
 }
@@ -50,8 +60,14 @@
     justify-content: space-between;
 }
 .rightText {
-    margin-left: 100px;
+    padding-right: 40px;
 }
+
+.os {
+    padding-left: 70px;
+    width: 50%;
+}
+
 .osText__item {
     display: flex;
     align-items: center;
@@ -70,7 +86,7 @@
 }
 
 .wrapper button {
-    background: url("../../../../ze-host/src/img/ask.png");
+    background: url("../../../../ze-host-verstka/src/img/ask.png");
     border: none;
     outline: none;
     cursor: pointer;
@@ -125,6 +141,78 @@ hr {
 .discount, .payment, .order button {
     margin-right: 80px;
 }
+.toggles {
+    display: flex;
+    flex-direction: column;
+}
+.switch:last-child {
+    margin-top: 90px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#windowsServer, #debian, #ubuntu, #centos, #freebsd, #custom, #days7, #days14, #days30, #advanced{
+    display: none;
+}
 
 @media (max-width: 1600px) {
     .bigText h1{
@@ -137,7 +225,7 @@ hr {
 }
 
 @media (max-width: 1326px) {
-    .os h1, .config h1{
+    .os h1,select, .config h1{
         font-size: 18px;
     }
     .os p {
@@ -152,6 +240,7 @@ hr {
     .wrapper {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     .bigText h1 {
         font-size: 80px;
@@ -192,7 +281,7 @@ hr {
     .configText p{
         font-size: 16px;
     }
-    .osText h1, .osText p {
+    .osText h1,select, .osText p {
         font-size: 14px;
     }
 

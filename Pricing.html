@@ -23,7 +23,8 @@
                 <h1 class="configTitle">Select the required server configuration</h1>
                 <div class="configText">
                     <div class="configText__item">
-                        <p>CPU: <p class="cpu">1</p></p>
+						<p>CPU: <p class="cpu">[1,40)</p></p>
+						<p class="step" id="cpuStep" style="display:none">1</p>
                         <button/>
                     </div>
                     <p><u class="price1">150</u>$/M</p>
@@ -33,17 +34,19 @@
                 </div>
                 <div class="configText">
                     <div class="configText__item">
-                        <p>RAM: <u class="ram">1</u> gb</p>
+						<p>RAM: <u class="ram">[1,512)</u> gb</p>
+						<p class="step" id="ramStep" style="display:none">1</p>
                         <button/>
                     </div>
-                    <p><u class="price2">3000</u>$/M</p>
+                    <p><u class="price2">35</u>$/M</p>
                 </div>
                 <div class="range2">
                     <Range2/>
                 </div>
                 <div class="configText">
                     <div class="configText__item">
-                        <p>DISK: <u class="disk">110</u> Gb SSD</p>
+						<p>DISK: <u class="disk">[110,4096)</u> Gb SSD</p>
+						<p class="step" id="diskStep" style="display:none">20</p>
                         <button/>
                     </div>
                     <p><u class="price3">330</u>$/M</p>
@@ -57,39 +60,85 @@
                     <div class="osText__item">
                         <h1>Pre-installed OS: </h1>
                         <div class="osText_subtitle">
-                            <p>CentOS 7 x64</p>
+                            <select id="osSelect">
+                                <option value="windows10">Windows 10</option>
+                                <option value="windowsServer">Windows Server 2012r2/2016/2019</option>
+                                <option value="debian">Debian 8/9/10/11</option>
+                                <option value="ubuntu">Ubuntu 16.04/18.04/20.04</option>
+                                <option value="centos">CentOS 7/8</option>
+                                <option value="freebsd">FreeBSD 10/11</option>
+                                <option value="custom">Custom/Bring your own ISO</option>
+                            </select>
                             <button/>
                         </div>
                     </div>
-                    <h1 class="rightText">0$/M</h1>
+                    <h1 class="rightText" id="windows10"><span>1</span>$/M</h1>
+                    <h1 class="rightText" id="windowsServer"><span>2</span>$/M</h1>
+                    <h1 class="rightText" id="debian"><span>3</span>$/M</h1>
+                    <h1 class="rightText" id="ubuntu"><span>4</span>$/M</h1>
+                    <h1 class="rightText" id="centos"><span>5</span>$/M</h1>
+                    <h1 class="rightText" id="freebsd"><span>6</span>$/M</h1>
+                    <h1 class="rightText" id="custom"><span>7</span>$/M</h1>
                 </div>
                 <div class="osText">
                     <div class="osText__item">
                         <h1>Backup: </h1>
                         <div class="osText_subtitle">
-                            <p>Standart</p>
+                            <select id="backupSelect">
+                                <option value="standart">Standart</option>
+                                <option value="days7">7 days</option>
+                                <option value="days14">14 days</option>
+                                <option value="days30">30 days</option>
+                            </select>
                             <button/>
                         </div>
                     </div>
-                    <h1 class="rightText">0$/M</h1>
+                    <h1 class="rightText" id="standart"><span>1</span>$/M</h1>
+                    <h1 class="rightText" id="days7"><span>2</span>$/M</h1>
+                    <h1 class="rightText" id="days14"><span>3</span>$/M</h1>
+                    <h1 class="rightText" id="days30"><span>4</span>$/M</h1>
                 </div>
                 <div class="osText">
                     <div class="osText__item">
                         <h1>Support:</h1>
                         <div class="osText_subtitle">
-                            <p>Basic SLA Standart</p>
+                            <select id="supportSelect">
+                                <option value="basic">Basic 24/7/12</option>
+                                <option value="advanced">Advanced 24/7/2</option>
+                            </select>
                             <button/>
                         </div>
                     </div>
-                    <h1 class="rightText">0$/M</h1>
+                    <h1 class="rightText" id="basic"><span>0</span>$/M</h1>
+                    <h1 class="rightText" id="advanced"><span>1</span>$/M</h1>
                 </div>
+<!--                TOGGLES-->
+<!--                TOGGLES-->
+<!--                TOGGLES-->
+<!--                TOGGLES-->
+<!--                TOGGLES-->
+<!--                TOGGLES-->
+                <div class="toggles">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                        <p>DDOS Migration</p>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                        <p>WAF</p>
+                    </label>
+                </div>
+<!--                -->
+<!--                -->
+<!--                -->
+<!--                -->
+<!--                -->
             </div>
         </div>
         <div>
             <hr/>
-        </div>
-        <div class="step">
-            <Step/>
         </div>
         <div class="order">
             <div class="orderText">
@@ -127,6 +176,7 @@
     <script src="./Components/LittleComponents/Button/Button.js"></script>
     <script src="./Components/Range/Range.js"></script>
     <script src="./Components/Header/Header.js"></script>
+    <script src="./Components/Pricing/Pricing.js"></script>
     <script src="Pricing.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -148,7 +198,6 @@
         ReactDOM.render(React.createElement(Range1, null), document.querySelector('.range1'));
         ReactDOM.render(React.createElement(Range2, null), document.querySelector('.range2'));
         ReactDOM.render(React.createElement(Range3, null), document.querySelector('.range3'));
-        ReactDOM.render(React.createElement(Step, null), document.querySelector('.step'));
     </script>
 
   </body>
