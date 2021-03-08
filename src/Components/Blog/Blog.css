@@ -40,9 +40,29 @@
 
 .blog-text {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.blog-text img {
+.category-date {
+    display: flex;
+    padding-left: 25px;
+}
+
+.category-date p {
+    font-family: "Futura PT", serif;
+    text-transform: uppercase;
+}
+
+.date {
+    margin-left: 20px;
+}
+
+.blog-text__item {
+    display: flex;
+}
+
+.blog-text__item img {
     align-self: flex-start;
 }
 
@@ -50,16 +70,16 @@
     padding-bottom: 50px;
 }
 
-.blog-text {
+.blog-text__item {
     position: relative;
 }
 
-.blog-text img{
+.blog-text__item img{
     padding-right: 0;
     position: absolute;
     right: 10px;
 }
-.blog-text h1 {
+.blog-text__item h1 {
     padding-left: 20px;
     width: 56%;
 }

@@ -6,13 +6,41 @@
       <link rel="stylesheet" href="src/Components/Header/Header.css">
       <link rel="stylesheet" href="src/Components/Range/Range.css">
       <link rel="stylesheet" href="src/Components/Footer/Footer.css">
-      <link rel="stylesheet" href="src/Components/LittleComponents/Button/Button.css">
       <link rel="stylesheet" href="App.css">
 	<link rel="stylesheet" href="./src/Components/Pricing/Pricing.css">
   </head>
   <body style="display: none">
     <div id="header">
-        <Header/>
+        <div class="wrapperHead">
+            <div class="leftBlock">
+                <h1>LOGO</h1>
+                <a href="#eng"> <u>ENG</u></a>
+                <a href="#heb">HEB</a>
+            </div>
+            <div class="rightBlock">
+                <div class="rightLinks">
+                    <a href='index.html'>Home</a>
+                    <a href='about.html'> <u>About</u></a>
+                    <a href='service.html'>Services</a>
+                    <a href='pricing.html'>Pricing</a>
+                    <a href='blog.html'>Blog</a>
+                    <a href='faq.html'>FAQ</a>
+                    <a href='contact.html'>Contact Us</a>
+                </div>
+                <div class="header-btn">
+                    <div class="btn">
+                        <a href="https://cp.zehost.com">Control panel</a>
+                    </div>
+                </div>
+                <div class="burger">
+                    <button>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="mainWrapper">
         <div class="wrapper">
@@ -60,57 +88,33 @@
                     <div class="osText__item">
                         <h1>Pre-installed OS: </h1>
                         <div class="osText_subtitle">
-                            <select id="osSelect">
-                                <option value="windows10">Windows 10</option>
-                                <option value="windowsServer">Windows Server 2012r2/2016/2019</option>
-                                <option value="debian">Debian 8/9/10/11</option>
-                                <option value="ubuntu">Ubuntu 16.04/18.04/20.04</option>
-                                <option value="centos">CentOS 7/8</option>
-                                <option value="freebsd">FreeBSD 10/11</option>
-                                <option value="custom">Custom/Bring your own ISO</option>
+                            <span class="osArr" style="display: none">['win10','ubuntu','debian']</span>
+                            <span class="osPriceArr" style="display: none">['5','8','15']</span>
+                            <select class="osSelect">
+
                             </select>
                             <button/>
                         </div>
                     </div>
-                    <h1 class="rightText" id="windows10"><span>1</span>$/M</h1>
-                    <h1 class="rightText" id="windowsServer"><span>2</span>$/M</h1>
-                    <h1 class="rightText" id="debian"><span>3</span>$/M</h1>
-                    <h1 class="rightText" id="ubuntu"><span>4</span>$/M</h1>
-                    <h1 class="rightText" id="centos"><span>5</span>$/M</h1>
-                    <h1 class="rightText" id="freebsd"><span>6</span>$/M</h1>
-                    <h1 class="rightText" id="custom"><span>7</span>$/M</h1>
+                    <div class="priceOS">
+                        <h1 class="rightText"><span>0</span>$/M</h1>
+                    </div>
                 </div>
                 <div class="osText">
                     <div class="osText__item">
-                        <h1>Backup: </h1>
+                        <h1>Pre-installed OS: </h1>
                         <div class="osText_subtitle">
-                            <select id="backupSelect">
-                                <option value="standart">Standart</option>
-                                <option value="days7">7 days</option>
-                                <option value="days14">14 days</option>
-                                <option value="days30">30 days</option>
+                            <span  class="osArr" style="display: none">['win10','ubuntu','debian']</span>
+                            <span class="osPriceArr" style="display: none">['5','8','15']</span>
+                            <select class="osSelect">
+
                             </select>
                             <button/>
                         </div>
                     </div>
-                    <h1 class="rightText" id="standart"><span>1</span>$/M</h1>
-                    <h1 class="rightText" id="days7"><span>2</span>$/M</h1>
-                    <h1 class="rightText" id="days14"><span>3</span>$/M</h1>
-                    <h1 class="rightText" id="days30"><span>4</span>$/M</h1>
-                </div>
-                <div class="osText">
-                    <div class="osText__item">
-                        <h1>Support:</h1>
-                        <div class="osText_subtitle">
-                            <select id="supportSelect">
-                                <option value="basic">Basic 24/7/12</option>
-                                <option value="advanced">Advanced 24/7/2</option>
-                            </select>
-                            <button/>
-                        </div>
+                    <div class="priceOS">
+                        <h1 class="rightText"><span>0</span>$/M</h1>
                     </div>
-                    <h1 class="rightText" id="basic"><span>0</span>$/M</h1>
-                    <h1 class="rightText" id="advanced"><span>1</span>$/M</h1>
                 </div>
 <!--                TOGGLES-->
 <!--                TOGGLES-->
@@ -119,16 +123,26 @@
 <!--                TOGGLES-->
 <!--                TOGGLES-->
                 <div class="toggles">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                        <p>DDOS Migration</p>
-                    </label>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                        <p>WAF</p>
-                    </label>
+					<span class="toggle-price" style="display: none">['6','15']</span>
+					<div class="ddos">
+						<label class="switch">
+							<input type="checkbox" id="ddos-checkbox">
+							<span class="slider round"></span>
+							<p>DDOS Migration</p>
+						</label>
+						<div class="ddos-price"></div>
+
+					</div>
+					<div class="waf">
+						<label class="switch">
+							<input type="checkbox" id="waf-checkbox">
+							<span class="slider round"></span>
+							<p>WAF</p>
+						</label>
+						<div class="waf-price">
+
+						</div>
+					</div>
                 </div>
 <!--                -->
 <!--                -->
@@ -194,10 +208,10 @@
         });
     </script>
 	<script>
-        ReactDOM.render(React.createElement(Header, null), document.getElementById('header'));
         ReactDOM.render(React.createElement(Range1, null), document.querySelector('.range1'));
         ReactDOM.render(React.createElement(Range2, null), document.querySelector('.range2'));
         ReactDOM.render(React.createElement(Range3, null), document.querySelector('.range3'));
+        ReactDOM.render(React.createElement(SelectOS, null), document.querySelector('.osSelect'));
     </script>
 
   </body>

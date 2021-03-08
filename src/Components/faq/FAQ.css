@@ -34,6 +34,10 @@
     margin-left: 30px;
 }
 
+.radio__item label {
+	text-transform: uppercase;
+}
+
 .faq-description {
     display: none;
 }
@@ -96,7 +100,8 @@
 .faq-form-wrapper input {
     border: none;
     border-bottom: 1px solid black;
-    width: 46vw;
+	width: 46vw;
+	margin-top: 20px;
 }
 
 .faq-form-wrapper textarea {

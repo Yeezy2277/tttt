@@ -268,3 +268,22 @@ input, button, textarea {
 body {
   overflow-x: hidden;
 }
+
+.btn a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  width: 160px;
+  font-family: "Futura PT Extra", sans-serif;
+  background: #ee0023;
+  padding: 12px 50px;
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+@media (max-width: 1080px) {
+  .btn a {
+    padding: 10px 30px;
+    font-size: 8px;
+  }
+}

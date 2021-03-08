@@ -1,125 +1,54 @@
-// prices
-var windows10 = document.querySelector("#windows10"),
-    windowsServer = document.querySelector("#windowsServer"),
-    debian = document.querySelector("#debian"),
-    ubuntu = document.querySelector("#ubuntu"),
-    centos = document.querySelector("#centos"),
-    freebsd = document.querySelector("#freebsd"),
-    custom = document.querySelector("#custom"),
-    standart = document.querySelector("#standart"),
-    days7 = document.querySelector("#days7"),
-    days14 = document.querySelector("#days14"),
-    days30 = document.querySelector("#days30"),
-    basic = document.querySelector("#basic"),
-    advanced = document.querySelector("#advanced");
-//
+var osArr = document.querySelectorAll(".osArr"),
+    osPriceArr = document.querySelectorAll(".osPriceArr"),
+    togglePrice = document.querySelector(".toggle-price").textContent,
+    ddosPrice = document.querySelector(".ddos-price"),
+    wafPrice = document.querySelector(".waf-price"),
+    ddosCheckbox = document.querySelector("#ddos-checkbox"),
+    wafCheckbox = document.querySelector("#waf-checkbox"),
+    osSelect = document.querySelectorAll(".osSelect");
+var osArray = Array.prototype.slice.call(osArr).map(function (item) {
+    return item.textContent;
+}).map(function (item) {
+    return item.split("'").join("").split('[').join('').split(']').join('').split(",");
+});
+var osPriceArray = Array.prototype.slice.call(osPriceArr).map(function (item) {
+    return item.textContent;
+}).map(function (item) {
+    return item.split("'").join("").split('[').join('').split(']').join('').split(",");
+});
+var togglePriceArray = togglePrice.split("'").join("").split('[').join('').split(']').join('').split(",");
+console.log(osArray);
+// const SelectOS = () => {
+//     return osSelect.map(item => item.innerHTML = )
+// }
 
-// selects
-var osSelect = document.querySelector("#osSelect");
-backupSelect = document.querySelector("#backupSelect"), supportSelect = document.querySelector("#supportSelect");
-//
+var PriceOS = function PriceOS() {
+    return osPriceArray.map(function (item) {
+        return item.map(function (item) {
+            return React.createElement(
+                "option",
+                { className: item },
+                item
+            );
+        });
+    });
+};
 
-// functios - display: none
-function setOSDisplayNone() {
-    windows10.style.display = "none";
-    windowsServer.style.display = "none";
-    debian.style.display = "none";
-    ubuntu.style.display = "none";
-    centos.style.display = "none";
-    freebsd.style.display = "none";
-    custom.style.display = "none";
-}
-
-function setBackupDisplayNone() {
-    standart.style.display = "none";
-    days7.style.display = "none";
-    days14.style.display = "none";
-    days30.style.display = "none";
-}
-
-function setSupportDisplayNone() {
-    basic.style.display = "none";
-    advanced.style.display = "none";
-}
-//
-
-// OS is Selected
-function OSIsSelected() {
-    var osSelected = osSelect.options[osSelect.selectedIndex].value;
-    if (osSelected === "windows10") {
-        setOSDisplayNone();
-        windows10.style.display = "block";
+osSelect.addEventListener("change", function () {
+    var priceOS = document.querySelector(".priceOS").innerHTML = "<h1 class=\"rightText\"><span>" + osPriceArray[osSelect.options.selectedIndex] + "</span>$/M</h1>";
+});
+ddosCheckbox.addEventListener("click", function () {
+    if (ddosCheckbox.checked) {
+        ddosPrice.innerHTML = "<h1 class=\"rightText\"><span>" + togglePriceArray[0] + "</span>$/M</h1>";
+    } else {
+        ddosPrice.innerHTML = "";
     }
+});
 
-    if (osSelected === "windowsServer") {
-        setOSDisplayNone();
-        windowsServer.style.display = "block";
+wafCheckbox.addEventListener("click", function () {
+    if (wafCheckbox.checked) {
+        wafPrice.innerHTML = "<h1 class=\"rightText\"><span>" + togglePriceArray[1] + "</span>$/M</h1>";
+    } else {
+        wafPrice.innerHTML = "";
     }
-
-    if (osSelected === "debian") {
-        setOSDisplayNone();
-        debian.style.display = "block";
-    }
-
-    if (osSelected === "ubuntu") {
-        setOSDisplayNone();
-        ubuntu.style.display = "block";
-    }
-
-    if (osSelected === "centos") {
-        setOSDisplayNone();
-        centos.style.display = "block";
-    }
-
-    if (osSelected === "freebsd") {
-        setOSDisplayNone();
-        freebsd.style.display = "block";
-    }
-
-    if (osSelected === "custom") {
-        setOSDisplayNone();
-        custom.style.display = "block";
-    }
-}
-
-function BackupIsSelected() {
-    var backupSelected = backupSelect.options[backupSelect.selectedIndex].value;
-    if (backupSelected === "standart") {
-        setBackupDisplayNone();
-        standart.style.display = "block";
-    }
-
-    if (backupSelected === "days7") {
-        setBackupDisplayNone();
-        days7.style.display = "block";
-    }
-
-    if (backupSelected === "days14") {
-        setBackupDisplayNone();
-        days14.style.display = "block";
-    }
-
-    if (backupSelected === "days30") {
-        setBackupDisplayNone();
-        days30.style.display = "block";
-    }
-}
-
-function SupportIsSelected() {
-    var supportSelected = supportSelect.options[supportSelect.selectedIndex].value;
-    if (supportSelected === "basic") {
-        setSupportDisplayNone();
-        basic.style.display = "block";
-    }
-
-    if (supportSelected === "advanced") {
-        setSupportDisplayNone();
-        advanced.style.display = "block";
-    }
-}
-
-osSelect.addEventListener("change", OSIsSelected);
-backupSelect.addEventListener("change", BackupIsSelected);
-supportSelect.addEventListener("change", SupportIsSelected);
-
-//
+});

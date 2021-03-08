@@ -11,6 +11,9 @@ select {
     text-decoration: underline;
     outline: none;
     cursor: pointer;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
 }
 
 .wrapper {
@@ -58,9 +61,6 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.rightText {
-    padding-right: 40px;
 }
 
 .os {
@@ -187,8 +187,21 @@ hr {
     transition: .4s;
 }
 
+.ddos, .waf {
+	display: flex;
+	justify-content: space-between;
+}
+
+.waf {
+	margin-top: 90px;
+}
+
 input:checked + .slider {
     background-color: #2196F3;
+}
+
+.priceOS h1, .priceBackup h1, .priceSupport h1, .ddos-price h1, .waf-price h1 {
+	padding-right: 40px;
 }
 
 input:focus + .slider {
